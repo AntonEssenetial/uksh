@@ -1,0 +1,423 @@
+$IMG-PATH = '../images/backgrounds/'
+// Now you can use the function image-url
+// .element
+//   background-image image-url('logo.png')
+
+// Box sizing
+*
+  box-sizing border-box
+  
+// Wrapper
+.container-wrapper 
+  width 1200px
+  margin 0 auto
+  
+// Fonts
+roboto = 'Roboto', sans-serif;
+ptsans = 'Pt sans', sans-serif;
+$placeholderFont = roboto
+
+// Colors
+dark          =  #3c3c3c
+yellow        =  #fbd71d
+blue          =  #228fe3
+grey          =  #888888
+grey2         =  #d9d9d9
+grey3         =  #f8f8f8
+grey4         =  #656565
+grey5         =  #c1c1c1
+grey6         =  #ada29e
+soft          =  #f7fafc
+orange        =  #f17300
+orange2       =  #b85900
+green         =  #2dbb3c
+// purple        =  # 
+// pink          =  # 
+red           =  #ff0000
+brown         =  #151110
+brown2        =  #94796f
+brown3        =  rgba(27, 22, 20, 0.8)
+brown4        =  #332f2e
+brown5        =  #80655b
+brown6        =  #7c6f6a
+milk          =  #e5e1d0
+black2        =  #1b1614
+// gold          =  #
+
+// Input colors - readonly - disabled - succes - error
+BGreadonly    =  brown4
+readonly      =  brown6
+error         =  #c50018
+success       =  #20831d
+BGdisabled    =  #635d5a
+disabled      =  milk
+information   =  #0f4ede
+worning       =  #d66e00
+
+// Js class
+.jsVisible     
+  display block
+.jsContFlex.jsFlex
+  display flex
+.jsContFlex 
+  display none
+.jsTab 
+.jsTabDash
+  cursor pointer
+.jsCont 
+.jsContDash 
+  display none
+.jsCont.active
+.jsContDash.active 
+  display block
+.jsNone
+  display none
+  
+// Bx controls
+.jsNext
+.jsPrev
+  a 
+    width 100%
+    height 100% 
+
+// Functions 
+decor()
+  text-decoration underline
+  &:hover 
+    text-decoration none
+trs()
+  transition ease-in-out .2s
+trs-slow()
+  transition ease-in-out .4s
+
+// Color class
+.white
+  color white
+.blue 
+  color blue
+.red 
+  color red
+.green 
+  color green
+
+// Default input
+.form__label
+.form__area 
+  display block
+  width 100%
+.form__input
+  display block
+  width 100%
+  color brown6
+  &:focus 
+    color black
+    border 1px solid orange
+    box-shadow inset 0px 0px 0px 1px orange
+.form__area
+  padding 10px
+  
+// Disabled input
+input[type=text]:read-only
+  box-shadow none !important
+  background-color : BGreadonly
+  color      : readonly
+  border 1px solid readonly
+  &:focus
+    border 1px solid readonly !important
+    color readonly
+input[type=button]:disabled,
+button:disabled
+  background : transparent !important
+  border     : 1px solid BGdisabled !important
+  color      : BGdisabled
+  cursor     : default !important
+input[type=text]:disabled,
+input[type=submit]:disabled,
+.select_disabled,
+.button_disabled
+  background : BGdisabled !important
+  border     : 1px solid BGdisabled !important
+  color      : milk
+  cursor     : default !important
+.button_disabled:hover
+  background : BGdisabled !important
+  border     : 1px solid BGdisabled !important
+  color      : disabled !important
+  curosor    : default !important
+.input_error
+  border     : 1px solid error !important
+  box-shadow : inset 0px 0px 0px 1px error !important
+  color      : error !important
+.input_success 
+  border     : 1px solid success !important
+  box-shadow : inset 0px 0px 0px 1px success !important
+  color      : success !important
+input[type=submit]:disabled
+  color      : white
+  
+// Input reset 
+input
+textarea
+  padding 0px 
+  margin 0px 
+  border none
+  font-family ptsans
+  color blcak2
+  border 1px solid black
+  background: white
+select
+  background: white
+  padding 0px 
+  margin 0px 
+  border none
+  appearance none
+  border-radius (0px)
+  font-family ptsans
+  color blcak2
+  border 1px solid transparent
+  &:focus 
+    border 1px solid orange
+    
+// Label checkbox
+input[type="checkbox"]
+input[type="radio"]
+  display none
+.label__i
+  width 50px 
+  height 15px
+  background: brown6
+  display block
+  trs()
+.label__checkbox:checked + i
+  background: orange
+  margin-left 50px
+  trs()
+  
+// Placeholder color
+::-webkit-input-placeholder {color:brown6;}
+::-moz-placeholder          {color:brown6;}/* Firefox 19+ */
+:-moz-placeholder           {color:brown6;}/* Firefox 18- */
+:-ms-input-placeholder      {color:brown6;}
+  
+// Buttons
+button 
+  border none 
+  vertical-align middle
+  cursor pointer 
+  border none
+  outline none
+  background transparent
+.button
+  height 42px 
+  line-height 39px
+  padding 0 18px
+  display inline-block
+  font-size 14px
+  text-align: center
+  text-transform: uppercase
+  cursor pointer
+  color orange
+  border 2px solid orange
+  trs()
+  &:hover 
+    background orange
+    color white 
+    trs()
+.button_big
+  width 178px
+
+// col 
+for i in (1..100)
+  .col__{i}
+    width (i)%
+    position: relative
+
+// Alignment
+.ta-center
+  text-align: center
+.ta-left
+  text-align: left
+.ta-right
+  text-align: right
+
+// H heading 
+h2 
+  font-size 36px
+  font-weight 300
+h3 
+  font-size 24px
+h4 
+  font-size 18px
+  font-weight 300
+h5 
+  font-size 16px
+  font-weight 300
+h6 
+  font-size 14px 
+  font-weight 300
+  
+// Elements
+menu 
+  padding 0px
+  margin 0px
+span 
+  display inline-block
+  vertical-align middle
+  font-size 15px
+a 
+  text-decoration none
+  display inline-block
+h1, h2, h3, h4, h5, h6 
+  font-weight normal
+.text 
+  font-size 16px
+  line-height 23px   
+.text_milk
+  color milk     
+
+// Custom functions
+
+    
+// Banner-link
+.banner__link 
+  color brown6
+  font-size 14px
+    
+// Charts 
+a[href="http://www.amcharts.com/javascript-charts/"]
+  display none !important
+  
+// Table reset 
+th 
+  font-weight normal
+  
+// Popup 
+// .popup.jsVisible 
+//   display flex
+// .popup
+//   display none
+//   position fixed 
+//   background: rgba(0,0,0, 0.4)
+//   overflow-y scroll
+//   top 0px
+//   left 0px 
+//   width 100% 
+//   height @width
+//   flex-direction column
+//   flex-wrap wrap
+//   z-index 3
+//   .container-wrapper
+//     margin auto auto
+//   &__container
+//     width 615px 
+//     background: brown4
+//     margin 0 auto 30px auto
+//     padding 40px
+//     position relative
+//   &__close 
+//     sprite($sprite-close)
+//     right -40px 
+//     top 0px
+//     position absolute
+//     cursor pointer
+//     &:hover 
+//       sprite($sprite-close-hover)
+//   &__title 
+//     font-size 24px 
+//     color milk
+//     bordered()
+//     &:after 
+//       margin 30px 0 0 0
+//   &__link 
+//     color orange
+//     font-size 15px
+//     &_sm 
+//       font-size 14px
+//       color @color
+//       display block
+//   &__links
+//     margin 8px 0 0 0
+//   &__separator
+//     color milk
+//     margin 0 7px
+//     position relative 
+//     top -1px
+//   &__form 
+//     margin 25px 0 0 0
+//   &__captcha 
+//     margin 0 0 25px 0
+//   &__tooltip 
+//     color brown6
+//     font-size 14px
+//     line-height 23px
+//     margin 6px 0 0 0
+//   &__generate
+//     margin 28px 0 20px 0
+//   &__reset-button
+//     background: BGdisabled
+//     padding 11px 11px 12px 11px
+//     display inline-block
+//     border none
+//     position absolute
+//     top 29px 
+//     right 0px
+//     border-left 2px solid brown4
+//   &__area 
+//     height 120px !important
+//   &__text 
+//     color white
+//     font-size 14px 
+//     margin 25px 0 0 0
+//     bordered()
+//     &:after 
+//       margin 30px 0 0 0
+//   &__number
+//     color orange
+
+// Notifications 
+// .notification
+//   position fixed
+//   width 100%
+//   top 0px 
+//   left 0px
+//   z-index 4
+// .notifi
+//   position relative
+//   margin 0 auto 10px auto
+//   width 100%
+//   display none
+//   .close 
+//     top 15px
+//     right @top
+//     position absolute
+//     sprite($sprite-close-not)
+//     cursor pointer 
+//     opacity 0.7
+//     &:hover 
+//       opacity 1
+//   span 
+//     color white
+//     font-size 24px 
+//     font-weight 100
+//     text-transform uppercase
+//   p 
+//     font-size 14px
+//     color white
+// .notifi-wrapper
+//   width 1200px 
+//   margin 0 auto
+//   padding 10px 0
+//   text-align: center
+// .notifi__msg
+//   font-size 14px
+//   display block
+// .notifi_error 
+//   background: error
+// .notifi_success 
+//   background: success
+// .notifi_worning
+//   background: worning
+// .notifi_information
+//   background: information
+// .jsVisible 
+//   display block

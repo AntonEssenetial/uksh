@@ -1,0 +1,12 @@
+include head.jade
+include footer.jade
+include mixins.jade
+include variables.jade
+
+doctype
+html
+  head
+    +head()
+  body
+    block content
+    +footer()

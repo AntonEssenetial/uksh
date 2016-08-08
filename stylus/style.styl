@@ -1,0 +1,22 @@
+@import _plugins
+@import nib
+@import _variables
+@import _components
+
+
+body 
+  background: black
+  color white
+  placeholder(color #333, font-weight normal)
+  a 
+    color white
+input 
+  +placeholder()
+    color red
+    font-family $placeholderFont
+    font-weight bold
+
+.blue-triangle
+  triangle(50px, 50px, top, blue)
+  display block
+  absolute-center(300px, 50px)
