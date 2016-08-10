@@ -178,8 +178,16 @@
 
 .search 
   border-right 1px solid grey2
-  height 65px
+  height 70px
   cursor: pointer
+  position relative 
+  +after('')
+    width 1px 
+    height 6px 
+    background: yellow
+    right -1px
+    position absolute
+    bottom 0px
   &:hover .search__icon 
     sprite($sprite-search-a)
 .search__icon 

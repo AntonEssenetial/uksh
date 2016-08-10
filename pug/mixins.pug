@@ -3,7 +3,7 @@ mixin header()
   header.header
     .header__top
       .container-wrapper
-        .row.end
+        .row.end.responsive-column
           .header__col
             a.str21.bold.icon-1.row(href="tel:+73433790069") +7 (343) 379-00-69
             a.str21.bold.icon-2.row(href="tel:+73433712700") +7 (343) 371-27-00
@@ -26,10 +26,20 @@ mixin header()
                 span.str19.bold en
     .header__bottom
       .container-wrapper
-        .row.between
+        .row.between.relative.center
+          +sandwitch()
+          +responsive-menu()
           +menu()
           +search()
-          +responsive-menu()
+
+
+//- Sandwitch
+mixin sandwitch()
+  button.toggle-menu.jsTag
+    .sandwitch
+      span.sw-topper
+      span.sw-bottom
+      span.sw-footer
 
 //- Menu
 mixin menu()
@@ -215,79 +225,69 @@ mixin sl-nws()
       span.icon
 
 mixin responsive-menu()
-  ul.header__responsive-menu
-    li.menu__item.menu__item_active
-      a(href="").menu__link о компании
-      ul.menu__sub
-        li.menu__sub__item
-          ul.menu__sub2
-            li.menu__sub__item2
-              a(href="").menu__sub__link Наша команда
-            li.menu__sub__item2
-              a(href="").menu__sub__link Наши вакансии
-            li.menu__sub__item2
-              a(href="").menu__sub__link Финансы и юридическая поддержка
-            li.menu__sub__item2
-              a(href="").menu__sub__link Организация работы на проекте
-        li.menu__sub__item
-          ul.menu__sub2
-            li.menu__sub__item2
-              a(href="").menu__sub__link Лицензии и сертификаты
-            li.menu__sub__item2
-              a(href="").menu__sub__link Охрана труда и окружающей среды
-            li.menu__sub__item2
-              a(href="").menu__sub__link История
-    li.menu__item
-      a(href="").menu__link услуги 
-    li.menu__item
-      a(href="").menu__link клиенты 
-      ul.menu__sub
-        li.menu__sub__item
-          ul.menu__sub2
-            li.menu__sub__item2
-              a(href="").menu__sub__link Отзывы наших клиентов
-            li.menu__sub__item2
-              a(href="").menu__sub__link Все объекты
-            li.menu__sub__item2
-              a(href="").menu__sub__link МАШИНОСТРОЕНИЕ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ЧЕРНАЯ МЕТАЛЛУРГИЯ И ТРУБНАЯ ПРОМЫШЛЕННОСТЬ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ЦВЕТНАЯ МЕТАЛЛУРГИЯ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ГОРНОДОБЫВАЮЩАЯ ПРОМЫШЛЕННОСТЬ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ХИМИЧЕСКАЯ И НЕФТЕГАЗОВАЯ ПРОМЫШЛЕННОСТЬ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ЭНЕРГЕТИКА
-        li.menu__sub__item
-          ul.menu__sub2
-            li.menu__sub__item2
-              a(href="").menu__sub__link СТРОИТЕЛЬНАЯ ИНДУСТРИЯ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ОЧИСТНЫЕ СООРУЖЕНИЯ И ГАЗООТЧИСТКА
-            li.menu__sub__item2
-              a(href="").menu__sub__link АГРОПРОМЫШЛЕННОСТЬ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ПЕРЕДИСЛОКАЦИЯ ОБОРУДОВАНИЯ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ЛОГИСТИЧЕСКИЕ ОБЪЕКТЫ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ГОСУДАРСТВЕННЫЕ И МУНИЦИПАЛЬНЫЕ ЗАКАЗЧИКИ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ПРОЕКТИРОВАНИЕ
-            li.menu__sub__item2
-              a(href="").menu__sub__link ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
-    li.menu__item
-      a(href="").menu__link подрядчикам
-    li.menu__item
-      a(href="").menu__link пресс-центр
-      ul.menu__sub
-        li.menu__sub__item
-          ul.menu__sub2
-            li.menu__sub__item2
-              a(href="").menu__sub__link Новости компании
-            li.menu__sub__item2
-              a(href="").menu__sub__link Публикации в прессе
-    li.menu__item
-      a(href="").menu__link контакты
+  ul.header__responsive-menu.jsAcord
+    li
+      a(href="") о компании
+      ul
+        li
+          a(href="") Наша команда
+        li
+          a(href="") Наши вакансии
+        li
+          a(href="") Финансы и юридическая поддержка
+        li
+          a(href="") Организация работы на проекте
+        li
+          a(href="") Лицензии и сертификаты
+        li
+          a(href="") Охрана труда и окружающей среды
+        li
+          a(href="") История
+    li
+      a(href="") услуги 
+    li
+      a(href="") клиенты 
+      ul
+        li
+          a(href="") Отзывы наших клиентов
+        li
+          a(href="") Все объекты
+        li
+          a(href="") МАШИНОСТРОЕНИЕ
+        li
+          a(href="") ЧЕРНАЯ МЕТАЛЛУРГИЯ И ТРУБНАЯ ПРОМЫШЛЕННОСТЬ
+        li
+          a(href="") ЦВЕТНАЯ МЕТАЛЛУРГИЯ
+        li
+          a(href="") ГОРНОДОБЫВАЮЩАЯ ПРОМЫШЛЕННОСТЬ
+        li
+          a(href="") ХИМИЧЕСКАЯ И НЕФТЕГАЗОВАЯ ПРОМЫШЛЕННОСТЬ
+        li
+          a(href="") ЭНЕРГЕТИКА
+        li
+          a(href="") СТРОИТЕЛЬНАЯ ИНДУСТРИЯ
+        li
+          a(href="") ОЧИСТНЫЕ СООРУЖЕНИЯ И ГАЗООТЧИСТКА
+        li
+          a(href="") АГРОПРОМЫШЛЕННОСТЬ
+        li
+          a(href="") ПЕРЕДИСЛОКАЦИЯ ОБОРУДОВАНИЯ
+        li
+          a(href="") ЛОГИСТИЧЕСКИЕ ОБЪЕКТЫ
+        li
+          a(href="") ГОСУДАРСТВЕННЫЕ И МУНИЦИПАЛЬНЫЕ ЗАКАЗЧИКИ
+        li
+          a(href="") ПРОЕКТИРОВАНИЕ
+        li
+          a(href="") ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
+    li
+      a(href="") подрядчикам
+    li
+      a(href="") пресс-центр
+      ul
+        li
+          a(href="") Новости компании
+        li
+          a(href="") Публикации в прессе
+    li
+      a(href="") контакты

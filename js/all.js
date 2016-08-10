@@ -55,7 +55,7 @@ $(document).ready(function() {
   });
 
   // Navgoco acordion
-  var acordion = $()
+  var acordion = $('.jsAcord')
   acordion.navgoco({accordion: true});
 
   // Bx slider
@@ -142,14 +142,7 @@ $(document).ready(function() {
     });
   })(jQuery);
 
-  // Scroll to top
-  $().click(function () {
-    $('body,html').animate({
-        scrollTop: 0
-    }, 1000);
-    return false;
-  });
-
+  
   // Height detect funciton
   function heightDetect(){
     $().css( 
@@ -159,6 +152,24 @@ $(document).ready(function() {
   heightDetect();
   $(window).resize(function(){
     heightDetect();
+  });
+
+  // Width detect funciton
+  function widthDetect(){
+    $('.header__responsive-menu').css( 
+      'width', $(window).width()
+    );
+  };
+  widthDetect();
+  $(window).resize(function(){
+    widthDetect();
+  });
+
+  // toggle menu
+  $('.jsTag').click(function(event) {
+    $(this).toggleClass('active')
+    $('.header__responsive-menu').toggleClass('active animated fadeIn');
+    // $('.menu').toggleClass('active animated fadeInUp');
   });
 
 });

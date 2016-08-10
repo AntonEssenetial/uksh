@@ -1,19 +1,33 @@
+////////////////////////////////////
 +width-max(1315px)
   .section__sl .str12
     display none
+////////////////////////////////////
 +width-max(1185px)
   .container-wrapper
     width 100%
+////////////////////////////////////
 +width-max(1190px)
   .section__obj__wrap
     height auto
   .section__obj__wrap p
-  .section__sl p
+  .section__sl__article p
     ellipsis()
+////////////////////////////////////
 +width-max(1129px)
   .section__about .str36
     font-size 30px
+////////////////////////////////////
 +width-max(1025px)
+  .section__sl__article
+    width 100%
+  .footer__up
+    display none
+  .search 
+    border none
+    left 15px
+  .toggle-menu
+    display block
   .section__sl
     overflow visible
     max-height none
@@ -29,6 +43,9 @@
       width 50%
       &:last-child
         display none
+      &:nth-child(even)
+        .section__obj__wrap
+          border-right none
   .menu 
     display none
   .container-wrapper 
@@ -38,4 +55,118 @@
     .col__50 
       width 100%
       margin 0 0 10px 0
-    
+////////////////////////////////////
++width-max(990px)
+  .footer .responsive-column
+    flex-wrap wrap
+    > .col__50
+      width 100%
+      &:first-child
+        margin-bottom 20px
+////////////////////////////////////
++width-max(945px)
+  .footer .responsive-column
+    flex-wrap wrap
+    .col__50
+      width 100%
+  .section__obj__build .str24
+    margin-top 0px
+  .section__obj__table
+    .str14.ta-left
+      width 67%
+  .section__about
+    .row 
+      flex-wrap wrap
+    .col__25
+    .col__39
+    .col__36
+      width 100%
+    p 
+      padding 0px
+    .img-border-wrapper-left
+      padding-left 31px
+////////////////////////////////////
++width-max(800px)
+  .section__num
+    display none
+  .section__about
+    padding 20px 0
+  .section__obj__build
+    padding-top 20px
+    padding-bottom 200px
+  .morphsearch.open input
+    font-size: 16px !important;
+////////////////////////////////////
++width-max(768px)
+  .header__top
+    .responsive-column
+      justify-content: space-between;
+      .header__col 
+        padding 0px
+  .section__obj__build
+    .row 
+      flex-wrap wrap 
+      .col__35
+      .col__65 
+        width 100%
+      .col__35
+        margin 0px 0 20px 0
+        padding-right 31px
+////////////////////////////////////
++width-max(600px)
+  .bx-contros-slider
+    display none
+  .header__col:nth-child(2)
+    display none
+  .section__obj__title .str24
+    font-size 14px
+////////////////////////////////////
++width-max(515px)
+  .section__sl__article
+    width 100%
+  .footer__copi p
+    width 280px
+    font-size 12px
+  .section__obj__table .str14.ta-left
+    width 53%
+  .section__obj__title
+    .row 
+      flex-wrap wrap
+    span 
+      margin-bottom 10px
+      width 100%
+  .section__obj__wrap p, .section__sl p
+    white-space pre-line
+  .header__top .str21
+    font-size 14px
+  .section__obj__article .col__20
+    width 100%
+    border-left 1px solid grey2
+    &:nth-child(even)
+      .section__obj__wrap
+        border-right 1px solid grey2
+  .section__sl .str24
+    font-size 14px
+  .footer__copi
+    .end
+      justify-content: flex-start;
+    .row 
+      flex-wrap wrap
+      .col__50 
+        width 100%
+        padding 10px 0
+    .icon-level
+      margin-left 0px
+  .footer .responsive-column
+    flex-wrap wrap
+    > .col__50
+      width 100%
+      &:first-child
+        margin-bottom 20px
+      .row 
+        flex-wrap wrap 
+        .col__50 
+          width 100%
+          &:first-child
+            margin-bottom 20px
+  
