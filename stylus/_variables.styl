@@ -9,21 +9,43 @@ $IMG-PATH = '../images/backgrounds/'
   
 // Wrapper
 .container-wrapper 
-  width 1200px
+  width 1170px
   margin 0 auto
+  padding 0 20px
   
 // Fonts
-roboto = 'Roboto', sans-serif;
-ptsans = 'Pt sans', sans-serif;
+regular()
+  font-family: "GothamProRegular"
+bold()
+  font-family: "GothamProBold"
+black()
+  font-family: "GothamProBlack"
+italic()
+  font-family: "GothamProItalic"
+medium()
+  font-family: "GothamProMedium"
+.bold 
+  bold()
+.black
+  black()
+.italic 
+  italic()
+.medium 
+  medium()
+
 $placeholderFont = roboto
 
 // Colors
 dark          =  #3c3c3c
-yellow        =  #fbd71d
-blue          =  #228fe3
-grey          =  #888888
-grey2         =  #d9d9d9
-grey3         =  #f8f8f8
+yellow        =  #fcc100
+yellow2       =  #fa9600
+blue          =  #273480
+blue2         =  #156eba
+blue3         =  #101951
+blue4         =  #b1d7f3
+grey          =  #2d2e2f
+grey2         =  #c8cfd1
+grey3         =  #eaeeef
 grey4         =  #656565
 grey5         =  #c1c1c1
 grey6         =  #ada29e
@@ -108,11 +130,6 @@ trs-slow()
 .form__input
   display block
   width 100%
-  color brown6
-  &:focus 
-    color black
-    border 1px solid orange
-    box-shadow inset 0px 0px 0px 1px orange
 .form__area
   padding 10px
   
@@ -163,7 +180,7 @@ textarea
   border none
   font-family ptsans
   color blcak2
-  border 1px solid black
+  border none
   background: white
 select
   background: white
@@ -208,29 +225,36 @@ button
   outline none
   background transparent
 .button
-  height 42px 
-  line-height 39px
-  padding 0 18px
+  height 38px 
+  line-height @height
+  padding 0 30px
   display inline-block
   font-size 14px
+  bold()
   text-align: center
   text-transform: uppercase
   cursor pointer
-  color orange
-  border 2px solid orange
+  color white
   trs()
   &:hover 
-    background orange
-    color white 
+    background yellow
+    color blue
     trs()
 .button_big
   width 178px
+.button_blue
+  background: blue
 
 // col 
 for i in (1..100)
   .col__{i}
     width (i)%
     position: relative
+.col_margin
+  margin-right 30px
+.col__left
+.col__right 
+  position: relative
 
 // Alignment
 .ta-center
@@ -276,7 +300,37 @@ h1, h2, h3, h4, h5, h6
   color milk     
 
 // Custom functions
-
+vam($top = 0px, $margin = 0, $position = relative, $display = inline-block, $vertical-align = middle)
+  if $display
+    display $display
+  if $vertical-align
+    vertical-align $vertical-align
+  if $position
+    position $position
+  if $top 
+    top $top
+  if $margin 
+    margin $margin
+  
+bordered( $color = yellow, $size = 14px, $color2 = white)
+  if $size
+    font-size $size
+  if $color2
+    color $color2
+  bold()
+  text-transform: uppercase
+  +after('')
+    width 20px 
+    height 2px 
+    if $color
+      background: $color
+    display block
+    margin 2px 0 0 0
+    trs()
+  &:hover 
+    &:after 
+      width 100% 
+      trs()
     
 // Banner-link
 .banner__link 
@@ -292,6 +346,8 @@ th
   font-weight normal
   
 // Popup 
+.popup
+  display none
 // .popup.jsVisible 
 //   display flex
 // .popup

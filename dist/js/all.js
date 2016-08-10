@@ -1,4 +1,43 @@
 $(document).ready(function() {
+
+  // Search
+  $('.search').click(function(event) {
+    $('.morphsearch').toggleClass('open');
+  });
+  $('.morphsearch-close').click(function(event) {
+    $('.morphsearch').removeClass('open');
+  });
+
+  // Animate numbers 
+  $(window).scroll(startCounter);
+    function startCounter() {
+        if ($(window).scrollTop() > 1050) {
+            $(window).off("scroll", startCounter);
+            $('.jsNum').each(function () {
+                var $this = $(this);
+                jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                    duration: 5000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.ceil(this.Counter));
+                    }
+                });
+            });
+        }
+    }
+  
+  // Scroll to top
+  $('.jsTop').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 1000);
+    return false;
+  });
+
+  // lang selector
+  $('.jsLang').click(function(event) {
+    $(this).closest('.header__lang').toggleClass('active');
+  });
   // Active tabs
   $(".jsTab").click(function() {
     $(".jsTab").removeClass("active").eq($(this).index()).addClass("active");
@@ -20,14 +59,43 @@ $(document).ready(function() {
   acordion.navgoco({accordion: true});
 
   // Bx slider
-  $().bxSlider({
+  var slider1 = $('.bx-slider-1').bxSlider({
+    pager: false,
+    controls: false,
+    auto: true,
+    speed: 1000,
+    pause: 7000
+  });
+  var slider2 = $('.bx-slider-2').bxSlider({
+    pager: false,
+    controls: false,
+    auto: true,
+    speed: 1000,
+    pause: 7000
+  });
+  var slider3 = $('.bx-slider-3').bxSlider({
     pager: false,
     controls: false,
     auto: true,
     speed: 1000,
     pause: 7000,
-    mode: 'fade'
+    minSlides: 2,
+    maxSlides: 7,
+    slideWidth: 200,
+    slideMargin: 100
   });
+
+  $('#next').click(function(){
+    slider1.goToNextSlide();
+    slider2.goToPrevSlide();
+    return false
+  });
+  $('#prev').click(function(){
+    slider1.goToPrevSlide();
+    slider2.goToNextSlide();
+    return false
+  });
+
   $().bxSlider({
     pager: true,
     controls: false,
@@ -49,11 +117,10 @@ $(document).ready(function() {
   arrows: false,
   autoplay: false,
   slidesToShow: 15,
-  slidesToScroll: 9,
+  slidesToScroll: 9
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
-  ]
   });
 
   // Custom scroll function

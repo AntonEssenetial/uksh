@@ -1,0 +1,188 @@
+// bx-lider-2
+.bx-slider-2-wrapper
+  background: rgba(39, 52, 128, 0.88)
+  width 466px 
+  padding 17px 25px
+  overflow hidden
+  border-right 6px solid #e2ebed
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.38)
+  p 
+    color white !important
+    medium()
+    font-size 16px
+    line-height 25px !important
+#next 
+  border-bottom 1px solid #959789 
+  margin-top 7px
+#next
+#prev
+  background: #fbfcfd
+  width 30px 
+  height 35px
+  cursor: pointer
+  box-shadow: 1px 0 2px 0px rgba(0, 0, 0, 0.39);
+.bx-controls
+  right 0px
+  top 0px
+.bx-contros-slider
+  position absolute
+  top 80px
+  z-index 1
+  right 100px
+#next 
+  cursor pointer
+  display flex
+  .icon 
+    margin auto auto
+    sprite($sprite-left5)
+    display block
+  &:hover 
+    .icon
+      sprite($sprite-left5a)
+#prev 
+  cursor pointer
+  display flex
+  .icon 
+    margin auto auto
+    sprite($sprite-right2)
+    display block
+  &:hover 
+    .icon
+      sprite($sprite-right2a)
+      
+
+// Section border 
+
+.img-border-wrapper
+  padding-right: 50px;
+  padding-top: 30px;
+.img-border 
+  box-shadow: 30px -30px 0 0 #d5eaf3
+  img 
+    width 100%
+    max-width 100%
+    height auto
+    display block
+    
+.img-border-wrapper-left
+  padding-left: 50px;
+  padding-top: 30px;
+.img-border-left 
+  box-shadow: -30px -30px 0 0 #d5eaf3
+  img 
+    width 100%
+    max-width 100%
+    height auto
+    display block
+    
+
+// Icon nums 
+
+.icon__num-1
+  sprite($sprite-icon3)
+  margin 30px auto
+.icon__num-2
+  sprite($sprite-icon4)
+  margin 30px auto
+.icon__num-3
+  sprite($sprite-icon5)
+  margin 30px auto
+.icon__num-4
+  sprite($sprite-icon6)
+  margin 30px auto
+.icon__num-5
+  sprite($sprite-icon7)
+  margin 30px auto
+  
+// Socials sprites 
+
+.footer__soc1
+  margin 5px 0 0 0
+  a
+    &:first-child
+      sprite($sprite-soc1)
+      &:hover 
+        sprite($sprite-soc1a)
+    &:nth-child(2)
+      sprite($sprite-soc2)
+      &:hover 
+        sprite($sprite-soc2a)
+    &:nth-child(3)
+      sprite($sprite-soc3)
+      &:hover 
+        sprite($sprite-soc3a)
+    &:last-child
+      sprite($sprite-soc4)
+      &:hover 
+        sprite($sprite-soc4a)
+.footer__soc2
+  a
+    &:first-child
+      sprite($sprite-soc5)
+      &:hover 
+        sprite($sprite-soc5a)
+    &:nth-child(2)
+      sprite($sprite-soc6)
+      &:hover 
+        sprite($sprite-soc6a)
+    &:nth-child(3)
+      sprite($sprite-soc7)
+      &:hover 
+        sprite($sprite-soc7a)
+    &:last-child
+      sprite($sprite-soc8)
+      &:hover 
+        sprite($sprite-soc8a)
+        
+// new-level 
+.icon-level
+  sprite($sprite-new-level)
+  vam(-2px, 0px 0 0 10px)
+.new-level
+  regular()
+  font-size 10px 
+  text-transform: uppercase
+  color blue3
+  span 
+    text-align justify
+  &:hover
+    .icon-level 
+      sprite($sprite-new-levela)
+      
+// BG 
+.col__50_bg 
+  background: image-url('bg7.png') left top no-repeat
+.morphsearch
+  top 0px 
+  right 0px 
+  width 0px 
+  height 0px
+.morphsearch-content
+  background: blue
+  padding-top 45px
+  height 100%
+.morphsearch.open .morphsearch-content
+  height 100%
+.morphsearch
+  position: fixed
+.morphsearch.open .morphsearch-form
+  height 95px
+.morphsearch.open input
+  regular() !important
+  font-size 48px !important
+.morphsearch-input
+  color blue
+  regular() !important
+.dummy-media-object:hover h3
+  color yellow
+
+.search 
+  border-right 1px solid grey2
+  height 65px
+  cursor: pointer
+  &:hover .search__icon 
+    sprite($sprite-search-a)
+.search__icon 
+  sprite($sprite-search)
+  margin auto 20px
+  

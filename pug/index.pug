@@ -2,3 +2,135 @@ extends layout
 include mixins.pug
 
 block content
+  +header()
+  section.section__sl
+    .row
+      .col__62
+        .bx-contros-slider.row
+          .bx-slider-2-wrapper 
+            .bx-slider-2
+              .silde
+                p ПРОЕКТИРОВАНИЕ ПРОМЫШЛЕННЫХ ОБЪЕКТОВ (ГЕНЕРАЛЬНЫЙ ПРОЕКТИРОВЩИК)
+              .silde
+                p 1 ПРОЕКТИРОВАНИЕ ПРОМЫШЛЕННЫХ ОБЪЕКТОВ (ГЕНЕРАЛЬНЫЙ ПРОЕКТИРОВЩИК)
+              .silde
+                p 2 ПРОЕКТИРОВАНИЕ ПРОМЫШЛЕННЫХ ОБЪЕКТОВ (ГЕНЕРАЛЬНЫЙ ПРОЕКТИРОВЩИК)
+          .bx-controls
+            #next
+              .icon 
+            #prev
+              .icon  
+        .bx-slider-1
+          .slide
+            img(src="images/slider/slide1.jpg", alt="")
+          .slide
+            img(src="images/slider/slide1.jpg", alt="")
+          .slide
+            img(src="images/slider/slide1.jpg", alt="")
+      .col__38
+        .col__100
+          span.str24 НОВОСТИ КОМПАНИИ
+          +sl-nws()
+        .col__100
+          +sl-nws()
+        .col__100
+          a(href="").section__sl__all Все новости
+  section.section__obj
+    .section__obj__title
+      .container-wrapper 
+        .row.between.center
+          span.str24 построенные объекты
+          a(href="").str14 Все Объекты
+    .section__obj__article
+      .container-wrapper 
+        .row 
+          - for (var x = 0; x < 5; x++)
+            .col__20
+              a(href="").section__obj__item
+                .section__obj__wrap
+                  h3.str14.section__obj__name МАШИНОСТРОЕНИЕ
+                  h4.str14.section__obj__name2 «Волжский трубный завод»
+                  p Капитальный ремонт энергосетей и оборудования в цехах завода, в отделе главного энергетика, отделе главного. 
+                  span.icon2
+                .section__obj__img
+                  .section__obj__arrow
+                    span.icon
+                  img(src="images/articles/1.jpg", alt="")
+    .section__obj__build
+      .container-wrapper
+        .row
+          .col__35.img-border-wrapper.col_margin
+            .img-border
+              img(src="images/articles/2.jpg", alt="")
+          .col__65
+            .str24.bold Один из строящихся обьектов
+            .str16.medium Мультимодальные логистические комплексы
+            .str18.bold Готовность объекта 75%
+            .row 
+              .col__50.col_margin
+                ul.section__obj__table
+                  li.row
+                    span.str14.bold.ta-right.static Назначение объекта:
+                    span.str14.ta-left Ремонтное депо для поездов "Сапсан"
+                  li.row
+                    span.str14.bold.ta-right.static Общая площадь:
+                    span.str14.ta-left 10 341 кв.м
+                  li.row
+                    span.str14.bold.ta-right.static Город:
+                    span.str14.ta-left Санкт-Петербург
+                  li.row
+                    span.str14.bold.ta-right.static Адрес:
+                    span.str14.ta-left пос. Металлострой, уч. ж/д "река Славянка - ЛЭП", 16-й км
+              .col__50
+                p Подготовка высококвалифицированных магистров, способных не только планировать и осуществлять организацию мультимодальных перевозок на базе логистических комплексов,  но и владеющих основами системного и программно-целевого подходов при проектировании и эксплуатации.
+  section.section__num
+    .container-wrapper
+      .row 
+        .col__20
+          .icon__num-1
+          .str72.bold.jsNum 19
+          .str18.bold Лет на рынке
+        .col__20
+          .str72.bold.jsNum 185
+          .str18.bold Лет на рынке
+          .icon__num-2
+        .col__20
+          .icon__num-3
+          .str72.bold.jsNum 287
+          .str18.bold Лет на рынке
+        .col__20
+          .str72.bold.jsNum 5225
+          .str18.bold Лет на рынке
+          .icon__num-4
+        .col__20
+          .icon__num-5
+          .str72.bold.jsNum 10
+          .str18.bold Лет на рынке
+  section.section__about
+    .container-wrapper
+      .row 
+        .col__25.section__about_padding
+          span.str36 О компании
+          span.str16 ЗАО «Управляющая компания строительного холдинга» 
+        .col__39.section__about_padding 
+          p ЗАО «Управляющая компания строительного холдинга» (ЗАО «УКСХ») - одна из динамично развивающихся инжиниринговых компаний в России. ЗАО «УКСХ» оказывает полный комплекс услуг в области проектирования и строительства различных объектов «под ключ» для предприятий металлургической, машиностроительной, электроэнергетической и других промышленных отраслей.
+          p Широкие возможности по изготовлению металлоконструкций, наличие собственных производственных баз и строительной техники, а также профессионализм сотрудников позволяют ЗАО «УКСХ» подходить индивидуально к каждому проекту наших заказчиков, выполняя при этом как стандартные, так и эксклюзивные задачи по строительству, реконструкции и модернизации производства.
+        .col__36.img-border-wrapper-left
+          .img-border-left
+            img(src="images/articles/3.jpg", alt="")
+  section.section__client
+    .bx-slider-3 
+      .slide
+        img(src="images/clients/1.png", alt="")
+      .slide
+        img(src="images/clients/1.png", alt="")
+      .slide
+        img(src="images/clients/1.png", alt="")
+      .slide
+        img(src="images/clients/1.png", alt="")
+      .slide
+        img(src="images/clients/1.png", alt="")
+      .slide
+        img(src="images/clients/1.png", alt="")
+      .slide
+        img(src="images/clients/1.png", alt="")

@@ -14,6 +14,7 @@ var gulp = require ('gulp');
   browserSync = require('browser-sync').create();
   watch = require ('gulp-watch');
   concat = require('gulp-concat');
+  gcmq = require('gulp-combine-mq');
   // uglify = require('gulp-uglify');
   include = require('gulp-include');
   reload = browserSync.reload;
@@ -30,7 +31,8 @@ var options = {
   browserSync: {
     server: {
       baseDir: './dist'
-    }
+    },
+    notify: false
   }
 }
 
@@ -47,8 +49,8 @@ gulp.task('sprite', function() {
   var spriteData = 
     gulp.src('assets/images/sprite/*.png') 
       .pipe(spritesmith({
-          imgName: 'sprite2.png',
-          cssName: 'sprite.styl',
+          imgName: 'sprite.png',
+          cssName: '_sprite.styl',
           cssFormat: 'stylus',
           algorithm: 'binary-tree',
           padding: 10,
@@ -58,7 +60,7 @@ gulp.task('sprite', function() {
           }
       }));
   spriteData.img.pipe(gulp.dest('dist/images/')); 
-  spriteData.css.pipe(gulp.dest('stylus')); 
+  spriteData.css.pipe(gulp.dest('stylus/components/')); 
 });
 
 // Gulp pug
@@ -75,11 +77,13 @@ gulp.task('stylus', function(cb){
     .pipe(stylus({
       use: nib()
       }))
+    .pipe(gcmq({beautify: true}))
     .pipe(csscomb())
     .pipe(gulp.dest('dist/css'))
     .pipe(csso())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.stream());
   });
 
 var correctNumber = function correctNumber(number) {

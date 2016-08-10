@@ -1,0 +1,293 @@
+//- header
+mixin header()
+  header.header
+    .header__top
+      .container-wrapper
+        .row.end
+          .header__col
+            a.str21.bold.icon-1.row(href="tel:+73433790069") +7 (343) 379-00-69
+            a.str21.bold.icon-2.row(href="tel:+73433712700") +7 (343) 371-27-00
+            a.str10.bold.icon-3.row(href="mailto:info@uksh.ru") info@uksh.ru
+          .header__col
+            .row
+              .icon-4
+              .wrapper
+                span.str12 Россия, г. Екатеринбург, 
+                span.str12 пр. Ленина, д. 24/8, 620
+            a(href="").button.button_blue Обратны звонок
+          .header__col
+            .header__lang
+              .row
+                .header__ru.static
+                .header__down.row.header__down_active.jsLang
+                  span
+              a(href="").row.center.border
+                .header__eng
+                span.str19.bold en
+    .header__bottom
+      .container-wrapper
+        .row.between
+          +menu()
+          +search()
+          +responsive-menu()
+
+//- Menu
+mixin menu()
+  menu
+    ul.menu.row
+      li.menu__item.menu__item_active
+        a(href="").menu__link о компании
+        ul.menu__sub.row.bg2.animated.fadeIn
+          li.menu__sub__item
+            ul.menu__sub2
+              li.menu__sub__item2
+                a(href="").menu__sub__link Наша команда
+              li.menu__sub__item2
+                a(href="").menu__sub__link Наши вакансии
+              li.menu__sub__item2
+                a(href="").menu__sub__link Финансы и юридическая поддержка
+              li.menu__sub__item2
+                a(href="").menu__sub__link Организация работы на проекте
+          li.menu__sub__item
+            ul.menu__sub2
+              li.menu__sub__item2
+                a(href="").menu__sub__link Лицензии и сертификаты
+              li.menu__sub__item2
+                a(href="").menu__sub__link Охрана труда и окружающей среды
+              li.menu__sub__item2
+                a(href="").menu__sub__link История
+      li.menu__item
+        a(href="").menu__link услуги 
+      li.menu__item
+        a(href="").menu__link клиенты 
+        ul.menu__sub.row.bg1.animated.fadeIn
+          li.menu__sub__item
+            ul.menu__sub2
+              li.menu__sub__item2
+                a(href="").menu__sub__link Отзывы наших клиентов
+              li.menu__sub__item2
+                a(href="").menu__sub__link Все объекты
+              li.menu__sub__item2
+                a(href="").menu__sub__link МАШИНОСТРОЕНИЕ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ЧЕРНАЯ МЕТАЛЛУРГИЯ И ТРУБНАЯ ПРОМЫШЛЕННОСТЬ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ЦВЕТНАЯ МЕТАЛЛУРГИЯ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ГОРНОДОБЫВАЮЩАЯ ПРОМЫШЛЕННОСТЬ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ХИМИЧЕСКАЯ И НЕФТЕГАЗОВАЯ ПРОМЫШЛЕННОСТЬ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ЭНЕРГЕТИКА
+          li.menu__sub__item
+            ul.menu__sub2
+              li.menu__sub__item2
+                a(href="").menu__sub__link СТРОИТЕЛЬНАЯ ИНДУСТРИЯ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ОЧИСТНЫЕ СООРУЖЕНИЯ И ГАЗООТЧИСТКА
+              li.menu__sub__item2
+                a(href="").menu__sub__link АГРОПРОМЫШЛЕННОСТЬ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ПЕРЕДИСЛОКАЦИЯ ОБОРУДОВАНИЯ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ЛОГИСТИЧЕСКИЕ ОБЪЕКТЫ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ГОСУДАРСТВЕННЫЕ И МУНИЦИПАЛЬНЫЕ ЗАКАЗЧИКИ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ПРОЕКТИРОВАНИЕ
+              li.menu__sub__item2
+                a(href="").menu__sub__link ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
+      li.menu__item
+        a(href="").menu__link подрядчикам
+      li.menu__item
+        a(href="").menu__link пресс-центр
+        ul.menu__sub.row.bg3.animated.fadeIn
+          li.menu__sub__item
+            ul.menu__sub2
+              li.menu__sub__item2
+                a(href="").menu__sub__link Новости компании
+              li.menu__sub__item2
+                a(href="").menu__sub__link Публикации в прессе
+      li.menu__item
+        a(href="").menu__link контакты
+
+//- Search
+mixin search()
+  .search.row
+    .search__icon
+  <div id="morphsearch" class="morphsearch">
+    <form class="morphsearch-form">
+      <input class="morphsearch-input" type="search" placeholder="Что желаете найти?"/>
+      <button class="morphsearch-submit" type="submit">Search</button>
+    </form>
+    <div class="morphsearch-content">
+      <div class="dummy-column">
+        <h2>Найдено</h2>
+        <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+          <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+          <h3>Sara Soueidan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+          <img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+          <h3>Rachel Smith</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+          <img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+          <h3>Peter Finlan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+          <img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+          <h3>Patrick Cox</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/twholman">
+          <img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+          <h3>Tim Holman</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+          <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+          <h3>Shaun Dona</h3>
+        </a>
+      </div>
+      <div class="dummy-column">
+        <h2>Найденоr</h2>
+        <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+          <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+          <h3>Sara Soueidan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+          <img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+          <h3>Rachel Smith</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+          <img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+          <h3>Peter Finlan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+          <img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+          <h3>Patrick Cox</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/twholman">
+          <img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+          <h3>Tim Holman</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+          <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+          <h3>Shaun Dona</h3>
+        </a>
+      </div>
+      <div class="dummy-column">
+        <h2>Найдено</h2>
+        <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+          <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+          <h3>Sara Soueidan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+          <img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+          <h3>Rachel Smith</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+          <img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+          <h3>Peter Finlan</h3>
+        </a>
+        <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+          <img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+          <h3>Patrick Cox</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/twholman">
+          <img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+          <h3>Tim Holman</h3>
+        </a>
+        <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+          <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+          <h3>Shaun Dona</h3>
+        </a>
+      </div>
+    </div><!-- /morphsearch-content -->
+    <span class="morphsearch-close"></span>
+  </div><!-- /morphsearch -->
+
+mixin sl-nws()
+  .section__sl__article
+    span.str14 МЫ ОТМЕТИЛИ ДЕНЬ СЧАСТЬЯ!
+    span.str12 02/09/2013
+    p Не завяли еще цветы с 8 марта, а у коллектива УКСХ снова праздник – 20 марта – Международный день счастья!
+    a(href="").section__sl__more Подробнее
+      span.icon
+
+mixin responsive-menu()
+  ul.header__responsive-menu
+    li.menu__item.menu__item_active
+      a(href="").menu__link о компании
+      ul.menu__sub
+        li.menu__sub__item
+          ul.menu__sub2
+            li.menu__sub__item2
+              a(href="").menu__sub__link Наша команда
+            li.menu__sub__item2
+              a(href="").menu__sub__link Наши вакансии
+            li.menu__sub__item2
+              a(href="").menu__sub__link Финансы и юридическая поддержка
+            li.menu__sub__item2
+              a(href="").menu__sub__link Организация работы на проекте
+        li.menu__sub__item
+          ul.menu__sub2
+            li.menu__sub__item2
+              a(href="").menu__sub__link Лицензии и сертификаты
+            li.menu__sub__item2
+              a(href="").menu__sub__link Охрана труда и окружающей среды
+            li.menu__sub__item2
+              a(href="").menu__sub__link История
+    li.menu__item
+      a(href="").menu__link услуги 
+    li.menu__item
+      a(href="").menu__link клиенты 
+      ul.menu__sub
+        li.menu__sub__item
+          ul.menu__sub2
+            li.menu__sub__item2
+              a(href="").menu__sub__link Отзывы наших клиентов
+            li.menu__sub__item2
+              a(href="").menu__sub__link Все объекты
+            li.menu__sub__item2
+              a(href="").menu__sub__link МАШИНОСТРОЕНИЕ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ЧЕРНАЯ МЕТАЛЛУРГИЯ И ТРУБНАЯ ПРОМЫШЛЕННОСТЬ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ЦВЕТНАЯ МЕТАЛЛУРГИЯ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ГОРНОДОБЫВАЮЩАЯ ПРОМЫШЛЕННОСТЬ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ХИМИЧЕСКАЯ И НЕФТЕГАЗОВАЯ ПРОМЫШЛЕННОСТЬ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ЭНЕРГЕТИКА
+        li.menu__sub__item
+          ul.menu__sub2
+            li.menu__sub__item2
+              a(href="").menu__sub__link СТРОИТЕЛЬНАЯ ИНДУСТРИЯ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ОЧИСТНЫЕ СООРУЖЕНИЯ И ГАЗООТЧИСТКА
+            li.menu__sub__item2
+              a(href="").menu__sub__link АГРОПРОМЫШЛЕННОСТЬ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ПЕРЕДИСЛОКАЦИЯ ОБОРУДОВАНИЯ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ЛОГИСТИЧЕСКИЕ ОБЪЕКТЫ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ГОСУДАРСТВЕННЫЕ И МУНИЦИПАЛЬНЫЕ ЗАКАЗЧИКИ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ПРОЕКТИРОВАНИЕ
+            li.menu__sub__item2
+              a(href="").menu__sub__link ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
+    li.menu__item
+      a(href="").menu__link подрядчикам
+    li.menu__item
+      a(href="").menu__link пресс-центр
+      ul.menu__sub
+        li.menu__sub__item
+          ul.menu__sub2
+            li.menu__sub__item2
+              a(href="").menu__sub__link Новости компании
+            li.menu__sub__item2
+              a(href="").menu__sub__link Публикации в прессе
+    li.menu__item
+      a(href="").menu__link контакты

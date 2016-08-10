@@ -1,22 +1,456 @@
-@import _plugins
+@import '_plugins'
 @import nib
-@import _variables
-@import _components
-
+@import '_variables'
+@import '_components'
+@import '_media'
+@import '../fonts/stylesheet.css'
 
 body 
-  background: black
-  color white
-  placeholder(color #333, font-weight normal)
-  a 
-    color white
-input 
-  +placeholder()
-    color red
-    font-family $placeholderFont
-    font-weight bold
+  regular()
+  max-width 1920px
+  margin 0 auto
 
-.blue-triangle
-  triangle(50px, 50px, top, blue)
-  display block
-  absolute-center(300px, 50px)
+.header 
+  box-shadow inset 0 -6px 0 yellow
+  
+
+  &__top 
+    padding 20px 0
+    .str21 
+      color blue2
+      display block
+      margin 0 0 10px 0
+    .str10 
+      color blue
+      text-transform: uppercase
+    .str12 
+      color blue2
+      display: block
+      text-transform: uppercase
+      margin 0 0 5px 0
+    .button 
+      margin 8px 0 0 0
+  &__col 
+    padding 0 30px
+    .str19 
+      color blue2
+      text-transform: uppercase
+      margin-right 10px
+    .icon-1
+      +before('')
+        sprite($sprite-phone)
+        display inline-block 
+        vertical-align: middle
+        position relative 
+        top -2px
+        left 3px
+        width 20px
+    .icon-2
+      +before('')
+        sprite($sprite-fax)
+        display inline-block 
+        vertical-align: middle
+        position relative 
+        top -2px
+        left 0px
+        width 20px
+    .icon-3
+      +before('')
+        sprite($sprite-envelope)
+        display inline-block 
+        vertical-align: middle
+        position relative 
+        top -2px
+        left 0px
+        width 20px
+  &__down 
+    width 40px
+    border-left 1px solid grey2
+    cursor pointer
+    span 
+      sprite($sprite-down)
+      margin auto auto
+  .header__lang.active
+    .header__down
+      background image-url('bg1.png') no-repeat top left
+    .border 
+      display flex
+  &__eng 
+    sprite($sprite-en)
+    margin 9px 15px
+  &__ru 
+    sprite($sprite-ru)
+    margin 10px 15px
+  &__lang 
+    border 1px solid grey2
+  .border 
+    border-top 1px solid grey2
+    display none
+  .icon-4 
+    sprite($sprite-building)
+    margin-right 5px
+  &__bottom 
+    box-shadow inset 0 1px 0px grey2
+
+
+menu 
+  width 100%
+.menu 
+  position relative
+  
+
+  &__item 
+    position: relative
+    box-flex: 1;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+    box-shadow inset 0 -6px 0 yellow
+    +after('')
+      width 1px 
+      height 64px
+      background: grey2
+      display block
+      top 0px 
+      right 0px
+      position absolute
+    &_active 
+      background: blue 
+      +after()
+        display none
+      .menu__link
+        color white
+      box-shadow inset 0 -6px 0 #212e75
+    &:hover 
+      box-shadow inset 0 -6px 0 #212e75
+      background: blue
+      .menu__sub 
+        display flex
+      +after()
+        display none
+      .menu__link 
+        color white
+  &__link
+    text-align: center
+    color blue
+    bold()
+    font-size 18px
+    text-transform uppercase
+    display: block
+    height 70px 
+    line-height @height
+  &__sub 
+    display none
+    position absolute
+    width 100%
+    z-index 2
+    left 0px
+    padding 22px 30px
+    box-shadow: 0 8px 7px 4px rgba(0, 0, 0, 0.15);
+    top: 64px;
+    &__item
+      &:first-child 
+        border-right 1px solid #404b90
+        padding-right 30px
+        margin-right 30px
+      &2 
+        margin 0 0 15px 0
+        &:last-child
+          margin 0px
+    &__link 
+      bordered()
+  .bg1
+    background image-url('bg2.png') blue no-repeat right
+    width 642%
+    left -364px
+  .bg2
+    background image-url('bg3.png') blue no-repeat right
+    width 642%
+  .bg3
+    background image-url('bg4.png') blue no-repeat right
+    height 186px
+    width 442px
+    li
+      border none
+      
+
+.footer
+  background: blue
+  padding 40px 0
+  position: relative
+  
+
+  .form__input 
+    background: blue3
+    color white 
+    text-transform: uppercase
+    font-size 12px
+    padding 0 10px 
+    height 36px 
+    line-height @height
+    bold()
+    +placeholder()
+      color white
+  .form__label
+    position: relative
+    &_bg
+      margin 20px 0 0 0
+      +after('')
+        sprite($sprite-plain)
+        vam(10px, , absolute)
+        right 10px 
+      &:hover 
+        +after()
+          sprite($sprite-plaina)
+  &__link 
+    bordered()
+    margin 0 0 14px 0
+  .str16
+    color white
+    text-transform: uppercase
+    bold()
+  p 
+    color white
+    margin 8px 0 0 0
+    line-height 14px
+  &__soc-link 
+    margin 10px 10px 0px 0
+  &__copi
+    .col__50
+      padding 30px 0
+    p
+      width 300px
+  &__up 
+    sprite($sprite-up)
+    position absolute
+    bottom -30px
+    z-index 1
+    left 47.5%
+    &:hover 
+      sprite($sprite-upa)
+
+.section
+  
+
+  &__sl 
+    overflow hidden
+    max-height 547px
+    .slide img 
+      width 100%
+    &__article 
+      width 300px
+    .col__100
+      border-bottom 1px solid #404c90
+      margin-bottom 25px
+      &:last-child
+        border none
+        margin 0px
+    &__all
+      bordered()
+    &__more
+      background: white 
+      color blue
+      font-size 12px 
+      bold()
+      text-transform: uppercase
+      height 35px 
+      line-height 38px
+      padding 0 0 0 10px
+      margin 20px 0 25px 0
+      display inline-flex
+      box-shadow 0 0 23px #09113e
+      .icon
+        background: yellow
+        padding 0 12px
+        margin-left 10px
+        box-shadow: inset 1px 0 4px rgba(0, 0, 0, 0.18);
+        +after('')
+          sprite($sprite-right)
+          vam()
+      &:hover 
+        color yellow
+        .icon 
+          background: yellow2
+    .col__38
+      padding 25px
+      background blue
+      box-shadow: inset 0 0 30px rgba(12, 28, 125, 0.8);
+    .str24 
+      bold()
+      color blue4
+      margin 0 0 20px 0
+      +before('')
+        sprite($sprite-news)
+        display: inline-block
+        vertical-align: middle
+        margin-right 10px
+    .str14 
+      bold()
+      color blue4
+      display: block
+      margin 0 0 10px 0
+    .str12 
+      color blue4
+      margin 0 0 10px 0
+      +before('')
+        sprite($sprite-time)
+        vam(-1px, 0px 10px 0 0)
+    p
+      color blue4
+      line-height 19px
+      
+
+  &__obj
+    background: grey3
+
+
+    &__title
+      background: white 
+      border-bottom 4px solid yellow
+      padding 20px 0
+      .str24 
+        bold()
+        color blue 
+        text-transform: uppercase
+      .str14 
+        text-transform: uppercase 
+        bold()
+        color #156dbd
+        +before('')
+          sprite($sprite-left2)
+          vam(, 0px 10px 0 0)
+    &__name
+      bold()
+      color blue
+      ellipsis()
+      +before('')
+        sprite($sprite-icon1)
+        vam(-2px, 0px 6px 0 0)
+      margin 0 0 10px 0
+    &__name2
+      ellipsis()
+      bold()
+      color blue2
+      margin 0 0 5px 0
+    &__item 
+      line-height 17px
+      width 100%
+      img 
+        width 100%
+        display block
+      .icon2 
+        sprite($sprite-left3)
+    &__wrap 
+      padding 20px 10px 10px 10px
+      border-right 1px solid grey2
+      height 180px
+    .col__20 
+      overflow hidden
+      &:last-child .section__obj__wrap
+        border none
+      &:hover
+        .section__obj__wrap
+          background: yellow
+          trs()
+        .icon2 
+          sprite($sprite-left3a)
+        .section__obj__name2
+          color blue
+        .section__obj__arrow 
+          margin-left 0px
+          trs()
+          .icon
+            margin-left 45%
+            trs()
+            +before()
+              sprite($sprite-left4a)
+    &__img 
+      position relative
+    &__arrow 
+      trs()
+      position absolute
+      background: rgba(39, 52, 128, 0.78);
+      width 100% 
+      height 100%
+      top 0px 
+      left 0px
+      margin-left -77%
+      .icon
+        width 100%
+        height 100%
+        position relative
+        +before('')
+          sprite($sprite-left4)
+          absolute-center( 31px,27px ,vertical)
+        margin-left 81%
+        trs()
+    &__table
+      border 1px solid grey2
+      .ta-right 
+        width 100px
+        line-height 18px
+        margin-right 20px
+      .str14 
+        line-height 18px
+      li 
+        border-bottom 1px solid grey2 
+        padding 10px 0
+        &:last-child
+          border none
+    &__build 
+      background: image-url('bg5.jpg') white center bottom no-repeat
+      padding 90px 0 350px 0
+      .str24 
+        color blue 
+        margin 30px 0 0 0
+      .str16 
+        color blue2
+        text-transform: uppercase
+        margin 20px 0
+      .str18 
+        color blue
+        margin 0 0 20px 0
+        +before('')
+          sprite($sprite-icon2)
+          vam(, 0px 10px 0 0)
+          
+
+  &__num 
+    background: image-url('bg6.jpg') center no-repeat
+    background-size cover
+    padding 50px 0
+
+    
+    .str72
+    .str18 
+      color blue4
+      text-transform: uppercase
+      text-align: center
+      
+
+  &__about
+    padding 70px 0 100px 0
+    
+
+    p 
+      margin 0 0 20px 0
+      padding 0 50px 0 20px
+    .str36 
+      color blue
+      bold()
+      text-transform uppercase
+    .str16 
+      medium()
+      color blue2
+      text-transform: uppercase
+      line-height 23px
+      margin 20px 0 0 0
+    &_padding 
+      padding 30px 0 0 0
+      
+
+  &__client 
+    overflow hidden
+    background: grey3
+    padding 35px 0
+    

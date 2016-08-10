@@ -1,3 +1,59 @@
 mixin footer
+  footer
+    .footer 
+      .container-wrapper
+        .row 
+          .col__50
+            .row
+              .col__50
+                ul
+                  li.footer__item
+                    a.footer__link(href="") главная   
+                  li.footer__item
+                    a.footer__link(href="") о компании
+                  li.footer__item
+                    a.footer__link(href="") Услуги
+                  li.footer__item
+                    a.footer__link(href="") клиенты
+              .col__50
+                ul
+                  li.footer__item
+                    a.footer__link(href="") партнеры
+                  li.footer__item
+                    a.footer__link(href="") подрядчики
+                  li.footer__item
+                    a.footer__link(href="") пресс-центр
+                  li.footer__item
+                    a.footer__link(href="") контакты
+          .col__50
+            .row
+              .col__50
+                span.str16 Мы в соцсетях
+                .row.footer__soc1
+                  a(href="").footer__soc-link
+                  a(href="").footer__soc-link
+                  a(href="").footer__soc-link
+                  a(href="").footer__soc-link 
+                .row.footer__soc2
+                  a(href="").footer__soc-link
+                  a(href="").footer__soc-link
+                  a(href="").footer__soc-link
+                  a(href="").footer__soc-link
+              .col__50
+                span.str16 новостная рассылка
+                p Подпишитесь на оперативне получение самых свежих новостей и предложений нашей компании
+                form(action="")
+                  label().form__label.form__label_bg
+                    input.form__input(type="text", placeholder='e-mail адрес')
+          span.footer__up.jsTop
+    .footer__copi
+      .container-wrapper
+        .row.between.center
+          .col__50.col__50_bg
+            p © 2010 – 2016 ЗАО "Управляющая компания строительного холдинга" (ЗАО "УКСХ") <br> Все права защищены. 
+          .col__50
+            .row.end
+              a(href="http://new-level.by").new-level
+                span.icon-level
   include scripts.pug
   include popup.pug
