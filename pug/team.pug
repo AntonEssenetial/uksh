@@ -1,0 +1,58 @@
+extends layout
+include mixins.pug
+
+block content
+  - var pageId = 0;
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Наша комманда"
+      ])
+      .row.flex__870.team
+        .col__65.col_margin
+          .row
+            .col__329.static
+              h3.section__content-h3 Общее <br> Количество <br> сотрудников
+              .box
+                span.str70 530
+                span.str25 человек
+            .col__628.img-width
+              img(src="images/backgrounds/bg9.png", alt="")
+        .col__35
+          ul.graphics
+            li.row.center
+              span.icon-g1.static
+              span.str18 с высшим образованием
+            li.row.center
+              span.icon-g2.static
+              span.str18 работающих с нами больше 2 лет
+            li.row.center
+              span.icon-g3.static
+              span.str18 инженерно-технических работников
+      .team-descr
+        +bold(['Команда «УКСХ» состоит из хорошо образованных людей, имеющих успешный опыт реализации проектов по повышению эффективности компаний. Ведущие консультанты группы руководили собственным бизнесом и/или работали топ менеджерами средних или крупных компаний.'])
+        +lists(
+          [''],
+          ['lists__item_blue'],
+          [
+            'В компании внедрена система отбора и оценки персонала, нацеленная на привлечение наиболее профессиональных и современно мыслящих специалистов.',
+            'Каждый проект проходит стадии защиты и подведения итогов, что дает возможность осмысления, сохранения и передачи опыта.',
+            'Корпоративный университет способствует развитию профессиональных навыков  сотрудников.'
+          ]
+        )
+      .team-acord
+        ul.jsNavgoco.acordion
+          - for (var x = 0 ; x <4 ; x++)
+            li.acordion__item
+              a(href='#').acordion__link Учередители
+              ul.row.between.team__item
+                - for (var y = 0; y < 4; y++)
+                  li.acordion__sub__link
+                    .acordion__sub__mig
+                      img(src='images/team/1.jpg')
+                    .acrodion__sub__name
+                      span.str20 Евгений Рачков
+                      span.str14 директор, ведущий консультант
+                      span.bord

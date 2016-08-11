@@ -328,9 +328,14 @@ bordered( $color = yellow, $size = 14px, $color2 = white)
     margin 2px 0 0 0
     trs()
   &:hover 
+    color yellow
     &:after 
       width 100% 
       trs()
+      
+static()
+  box-flex: 1;
+  flex: 0 0 auto;
     
 // Banner-link
 .banner__link 
@@ -493,6 +498,8 @@ th
   width 31px
   height 31px
   z-index 200
+  position relative 
+  top -4px
   > span
     width 31px
     height 4px
@@ -529,3 +536,28 @@ th
   opacity: 0
   top: 0
   transform: rotate(180deg)
+  
+// Acordion 
+.acordion
+  
+
+  &__item
+    position relative
+  &__link 
+    font-size 18px
+    color black 
+    bold()
+    span 
+      +before('')
+        sprite($sprite-acordion)
+        vam()
+  &__sub-item 
+    margin 20px 0 0 0
+    
+
+// Custom scrollbar
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+  background: white
+.mCSB_scrollTools .mCSB_draggerRail
+  background-color: rgb(16, 24, 81);

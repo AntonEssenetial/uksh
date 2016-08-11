@@ -1,0 +1,21 @@
+extends layout
+include mixins.pug
+
+block content
+  - var pageId = 0;
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Отзывы наших клиентов"
+      ])
+      +heading([
+        'Отзывы наших клиентов.'
+      ])
+      .lic
+        .row.lic-gal
+          - for (var x = 0; x < 12; x++)
+            a(href="images/docs/2.jpg").docs__link.col__23
+              img(src="images/docs/2.jpg", alt="").docs__img
+              span

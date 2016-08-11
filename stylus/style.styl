@@ -9,6 +9,9 @@ body
   regular()
   max-width 1920px
   margin 0 auto
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 
 .header 
   box-shadow inset 0 -6px 0 yellow
@@ -122,7 +125,7 @@ body
     sprite($sprite-building)
     margin-right 5px
   &__bottom 
-    box-shadow inset 0 1px 0px grey2
+    border-top 1px solid grey2
 
 
 menu 
@@ -193,15 +196,16 @@ menu
       bordered()
   .bg1
     background image-url('bg2.png') blue no-repeat right
-    width 642%
-    left -364px
+    width 643%
+    left -351px
   .bg2
     background image-url('bg3.png') blue no-repeat right
-    width 642%
+    width 643%
+    height 165px
   .bg3
     background image-url('bg4.png') blue no-repeat right
     height 186px
-    width 442px
+    width 427px
     li
       border none
       
@@ -266,7 +270,6 @@ menu
 
   &__sl 
     overflow hidden
-    max-height 547px
     .slide img 
       width 100%
     &__article 
@@ -274,6 +277,7 @@ menu
     .col__100
       border-bottom 1px solid #404c90
       margin-bottom 25px
+      width 96%
       &:last-child
         border none
         margin 0px
@@ -304,7 +308,7 @@ menu
         .icon 
           background: yellow2
     .col__38
-      padding 25px
+      padding 25px 5px 25px 25px
       background blue
       box-shadow: inset 0 0 30px rgba(12, 28, 125, 0.8);
     .str24 
@@ -354,19 +358,18 @@ menu
     &__name
       bold()
       color blue
-      ellipsis()
       +before('')
         sprite($sprite-icon1)
         vam(-2px, 0px 6px 0 0)
       margin 0 0 10px 0
     &__name2
-      ellipsis()
       bold()
       color blue2
       margin 0 0 5px 0
     &__item 
       line-height 17px
       width 100%
+      display: block
       img 
         width 100%
         display block
@@ -374,16 +377,16 @@ menu
         sprite($sprite-left3)
     &__wrap 
       padding 20px 10px 10px 10px
+      box-sizing content-box
       border-right 1px solid grey2
-      height 180px
     .col__20 
-      overflow hidden
       &:last-child .section__obj__wrap
         border none
       &:hover
         .section__obj__wrap
           background: yellow
           trs()
+          box-shadow: 0 5px 8px 0px rgba(0, 0, 0, 0.32);
         .icon2 
           sprite($sprite-left3a)
         .section__obj__name2
@@ -398,6 +401,7 @@ menu
               sprite($sprite-left4a)
     &__img 
       position relative
+      overflow hidden
     &__arrow 
       trs()
       position absolute
@@ -462,6 +466,7 @@ menu
 
   &__about
     padding 70px 0 100px 0
+    background: image-url('bg-main.jpg')
     
 
     p 
@@ -486,3 +491,171 @@ menu
     background: grey3
     padding 35px 0
     
+
+  &__content 
+    background: image-url('bg-main.jpg')
+    box-flex: 1;
+    flex: 1;
+    
+
+    p 
+      margin 0 0 25px 0
+      line-height 22px
+      
+
+
+  &__bg 
+    background: #f9f9f9
+    margin 60px 0 0 0
+    
+
+    &__per 
+      padding-bottom 20px
+      .row 
+        align-items: baseline;
+      .str30
+        bold()
+        color blue
+        margin-right 10px
+      .str18
+        color black
+        medium()
+    &__progress
+      background #e7e7e7
+      margin 20px 0 0 0
+      span 
+        width 80%
+        background: yellow
+        height 20px
+        display: block
+
+
+  &__mission 
+    padding 80px 0 90px 0
+    
+
+    &__list
+      font-size 14px 
+      color blue2
+      bold()
+      margin 0 0 12px 0
+      display flex
+      +before('')
+        border-left 3px solid yellow 
+        border-bottom 3px solid yellow
+        width 12px 
+        height 6px
+        vam(-3px, 0px 10px 0 0)
+        transform rotateZ(-50deg)
+    
+
+  &__rev 
+    background: #eaeeef
+    padding 50px 0 30px 0
+    
+
+    &__slider 
+      margin 20px 0 0 0
+
+
+.bread-crumbs
+  padding 30px 0
+  
+
+  &__item
+    medium()
+    color blue3 
+    font-size 14px
+    display: inline-block
+    a 
+      color blue
+    &:last-child
+      background: yellow 
+      color blue
+      padding 3px 15px
+    &:first-child
+      +before('')
+        sprite($sprite-home)
+        display: inline-block
+        margin-right 6px
+  &__separator 
+    sprite($sprite-bread)
+    display: inline-block
+    margin 0 10px
+    
+
+.acordion
+  
+
+  &__item
+    position relative
+    margin 0 0 40px 0
+  &__link 
+    font-size 18px
+    color black 
+    bold()
+    display flex
+    align-items center
+    line-height 22px
+    span 
+      +before('')
+        sprite($sprite-acordion)
+        vam(, 0px 20px 0 0)
+  &__item.open a span 
+    +before()
+      sprite($sprite-acordion-a)
+  &__sub-item 
+    margin 20px 0 0 0
+    padding 0 0px 0 72px
+    
+
+.bx-controls
+  
+
+  .s-prev 
+    a
+      sprite($sprite-bx-prev)
+    &:hover a
+      sprite($sprite-bx-prev-a)
+  .s-next 
+    a
+      sprite($sprite-bx-next)
+    &:hover a
+      sprite($sprite-bx-next-a)
+      
+
+.docs__link
+  border 1px solid grey2
+  +after('')
+    width 100% 
+    height 100% 
+    background: yellow
+    position: absolute
+    top 0px 
+    left 0px
+    z-index 1
+    opacity 0
+    trs()
+  +before()
+    sprite($sprite-plus)
+    absolute-center(30px, 30px)
+    opacity 0
+    trs()
+    z-index 2
+  &:hover 
+    +before()
+      opacity 1
+      trs()
+    +after()
+      opacity 0.8
+      trs()
+      
+.lic
+  .docs__link
+    +before('')
+      sprite($sprite-br) !important
+    span
+      position: absolute
+      right -28px 
+      bottom -30px
+      sprite($sprite-plus2)

@@ -194,3 +194,285 @@
   sprite($sprite-search)
   margin auto 20px
   
+.all 
+  text-transform: uppercase 
+  bold()
+  color #156dbd
+  +before('')
+    sprite($sprite-left2)
+    vam(, 0px 10px 0 0)
+    
+.docs__link 
+  width 99%
+  img 
+    display block
+    width 100% 
+    max-width 100% 
+    height auto
+    
+.img-border_grey
+  box-shadow: 30px -30px 0 0 #e3dec5
+  
+.str-title 
+  font-size 16px 
+  bold()
+  color blue2
+  margin 0 0 20px 0
+  
+.lists__items 
+  margin 0 0 20px 0
+  font-size 13px 
+  color grey
+  line-height 20px
+  italic()
+.lists__item
+  &_blue
+    li
+      display flex
+      margin-bottom 0px
+      italic()
+      font-size 13px
+      line-height 30px
+      +before('')
+        width 8px 
+        height @width
+        background: blue3
+        vam(10px, 0px 7px 0 0)
+        box-flex: 1;
+        flex: 0 0 auto;
+  &_yellow 
+    li
+      display flex
+      +before('')
+        width 10px 
+        height @width
+        background: yellow
+        vam(3px, 0px 5px 0 0)
+        box-flex: 1;
+        flex: 0 0 auto;
+
+.bg-img 
+  width 100%
+  max-width 100% 
+  height auto
+  display block
+
+.row  
+  .span__99
+    width 99%
+  .span__90
+    width 90%
+  .span__92
+    width 92%
+  .span__89
+    width 89%
+.self-end
+  align-self: flex-end;
+.self-center
+  align-self: center
+.acordion__span 
+  font-size 14px
+  display flex
+  margin 8px 0
+  line-height: 21px
+  +before('')
+    width 6px 
+    height @width
+    background: yellow
+    box-flex: 1;
+    flex: 0 0 auto;
+    border-radius (50%)
+    vam(6px, 0px 8px 0 0)
+.acordion
+  .str14 
+    medium()
+    color blue2
+.section__content-text
+  medium()
+  line-height 23px
+  p
+    font-size 16px
+.bx-controls-4 
+  width 180px
+  margin 0 auto
+  position relative 
+  top -25px
+.section__content-h3
+  color blue
+  font-size 24px
+  bold()
+  text-transform: uppercase
+  line-height 27px
+.col__65 img 
+  position relative 
+  left 40px
+.team 
+  padding 0 0 50px 0
+.box 
+  margin 25px 0 0 0
+  width 200px 
+  height @width
+  padding 50px 0 0 0
+  border 10px solid blue2
+  text-align: center
+  .str70 
+    bold()
+    font-size 70px
+    color blue2
+  .str25 
+    font-size 25px
+    color blue2
+    text-transform: uppercase
+    position relative 
+    top -5px
+.col__628
+  width 64.1%
+.img-width 
+  img
+    width 100%
+    max-width 100% 
+    height auto
+.graphics
+  .str18
+    color blue
+    medium()
+  li 
+    margin 0 0 20px 0
+.icon-g1 
+  sprite($sprite-g1)
+  margin-right 20px
+.icon-g2 
+  sprite($sprite-g2)
+  margin-right 20px
+.icon-g3
+  sprite($sprite-g3)
+  margin-right 20px
+.text-wrapper
+  p 
+    medium()
+    font-size 16px
+.team-descr 
+  padding 0 0 40px 0
+    
+.acordion__sub__link
+  width 23%
+  .str20 
+    bold()
+    color blue2
+    font-size 20px
+    display: block
+    padding 20px 0 10px 0
+  .str14 
+    display: block
+  img 
+    display block
+    width 100% 
+    max-width 100% 
+    height auto
+.acrodion__sub__name
+  background: #eef1f2
+  text-align: center
+  padding 0 15px 0px 15px
+.bord 
+  height 2px 
+  width 70px 
+  background: yellow
+  margin 0 auto
+  position relative 
+  top 3px
+.team__item 
+  margin 30px 0 0 0
+.team-acord 
+  padding 30px 0 30px 0
+body .acordion__sub-item_reset
+  margin-top 0px  
+h4 
+  medium()
+  color blue2
+.charts 
+  padding 25px 0 0 0
+  width 100%
+  height 500px
+  span 
+    font-size 12px
+  #chartdiv 
+    width 100%
+    height 100%
+.offers 
+  padding 80px 0
+  .col__23 
+    text-align: center
+  .str16 
+    medium()
+.chart1
+  sprite($sprite-chart1)
+  margin 0 auto 20px auto
+.chart2
+  sprite($sprite-chart2)
+  margin 0 auto 20px auto
+.chart3
+  sprite($sprite-chart3)
+  margin 0 auto 20px auto
+.chart4
+  sprite($sprite-chart4)
+  margin 0 auto 20px auto
+  
+.tab 
+  padding 40px 0 60px 0
+  img 
+    width 100% 
+    max-width 100% 
+    height auto
+
+.lic 
+  padding-top 20px
+  padding-bottom 60px
+.lic-gal
+  flex-wrap wrap
+  
+.docs__link.col__23
+  border none
+  width 23%
+  margin-right 2.5%
+  margin-bottom 2.5%
+  &:nth-child(4n-0)
+    margin-right 0px
+    span 
+      display none    
+      
+.save 
+  padding 30px 0 50px 0
+  
+.img-flex
+  img 
+    width 100% 
+    height auto 
+    max-width 100%
+    
+.container 
+  padding 50px 0
+  &_reset 
+    padding-bottom 0px
+    
+// .scroll-wrap
+//   height 500px
+  
+.s-text 
+  color white
+  padding-top 5px
+  
+.nums__span 
+  font-size 14px 
+  medium()
+.nums__value
+  background: yellow
+  color white
+  bold()
+  font-size 60px
+  width 50px 
+  height @width
+  text-align: center
+  margin-right 10px
+  static()
+.nums__item
+  margin-bottom 40px

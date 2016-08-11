@@ -1,0 +1,34 @@
+extends layout
+include mixins.pug
+
+block content
+  - var pageId = 0;
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Наши вокансии"
+      ])
+      +heading([
+        'Оборот компании млрд. руб.'
+      ])
+      h4 Пятилетние периоды
+      .charts
+        span млрд. рублей
+        #chartdiv
+      .offers
+        .row.between
+          .col__23
+            .chart1
+            span.str16 Предоставляем банковские гарантии на возврат аванса
+          .col__23
+            .chart2
+            span.str16 Страхуем риски по проекту, в том числе финансовые
+          .col__23
+            .chart3
+            span.str16 Предлагаем удобную для заказчика гибкую схему финансирования работ
+          .col__23
+            .chart4
+            span.str16 Помогаем адаптировать условия договоров под российское законодательство для иностранных заказчиков
+                    

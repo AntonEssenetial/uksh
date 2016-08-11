@@ -1,0 +1,18 @@
+extends layout
+include mixins.pug
+
+block content
+  - var pageId = 0;
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Организация работы на проекте"
+      ])
+      +heading([
+        'Организация работы на проекте.'
+      ])
+      .tab
+        a(href='images/backgrounds/tab.jpg') 
+          img(src='images/backgrounds/tab.jpg')
