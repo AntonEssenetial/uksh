@@ -125,22 +125,34 @@ body
     sprite($sprite-building)
     margin-right 5px
   &__bottom 
-    border-top 1px solid grey2
+    position: relative
+    +after('')
+      width 100% 
+      height 1px 
+      background: grey2
+      left 0px 
+      top 0px
+      position absolute 
+      display block
+      z-index 0
 
 
 menu 
   width 100%
+  z-index 2
 .menu 
   position relative
   
 
   &__item 
-    position: relative
     box-flex: 1;
     flex-grow: 1;
     flex-basis: 0;
     max-width: 100%;
     box-shadow inset 0 -6px 0 yellow
+    border-right 1px solid grey2
+    &:first-child
+      border-left 1px solid grey2
     +after('')
       width 1px 
       height 64px
@@ -151,6 +163,7 @@ menu
       position absolute
     &_active 
       background: blue 
+      border-color: blue;
       +after()
         display none
       .menu__link
@@ -174,6 +187,15 @@ menu
     display: block
     height 70px 
     line-height @height
+    position: relative
+    +after('')
+      position absolute
+      width 1px 
+      height 6px 
+      right -1px 
+      bottom 0px
+      background: yellow
+      display block
   &__sub 
     display none
     position absolute
@@ -196,16 +218,13 @@ menu
       bordered()
   .bg1
     background image-url('bg2.png') blue no-repeat right
-    width 643%
-    left -351px
+    width 100%
   .bg2
-    background image-url('bg3.png') blue no-repeat right
-    width 643%
-    height 165px
+    background image-url('bg3.png') blue no-repeat right bottom
+    width 100%
   .bg3
     background image-url('bg4.png') blue no-repeat right
     height 186px
-    width 427px
     li
       border none
       
@@ -235,6 +254,7 @@ menu
         sprite($sprite-plain)
         vam(10px, , absolute)
         right 10px 
+        cursor pointer
       &:hover 
         +after()
           sprite($sprite-plaina)
@@ -262,6 +282,7 @@ menu
     bottom -30px
     z-index 1
     left 47.5%
+    cursor pointer
     &:hover 
       sprite($sprite-upa)
 
@@ -567,6 +588,7 @@ menu
     color blue3 
     font-size 14px
     display: inline-block
+    margin-bottom 5px
     a 
       color blue
     &:last-child
@@ -589,7 +611,7 @@ menu
 
   &__item
     position relative
-    margin 0 0 40px 0
+    padding 0 0 40px 0
   &__link 
     font-size 18px
     color black 

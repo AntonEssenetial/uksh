@@ -1,0 +1,59 @@
+extends layout
+include mixins.pug
+
+block content
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Заказчики"
+      ])
+      +heading([
+        'Заказчики УКСХ'
+      ])
+      .container
+        .container-map
+          img(src='images/backgrounds/11.png')
+      .container 
+        .row.between.col__custom.country
+          ul
+            li
+              img(src="images/country/1.png", alt="")
+              a(href="") Германия
+
+            li
+              img(src="images/country/2.png", alt="")
+              a(href="") Испания
+
+            li
+              img(src="images/country/3.png", alt="")
+              a(href="") Италия
+
+          ul
+            li
+              img(src="images/country/4.png", alt="")
+              a(href="") Китай
+
+            li
+              img(src="images/country/5.png", alt="")
+              a(href="") Оман
+
+            li
+              img(src="images/country/6.png", alt="")
+              a(href="") Франция
+
+          ul
+            li
+              img(src="images/country/7.png", alt="")
+              a(href="") Финляндия
+
+            li
+              img(src="images/country/8.png", alt="")
+              a(href="") Япония
+      .container
+        .row.lic-gal.customers
+          - for (var x = 0; x < 16; x++)
+            a(href="images/customers/1.png").docs__link.col__23
+              img(src="images/customers/1.png", alt="").docs__img
+              | Hyundai

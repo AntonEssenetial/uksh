@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  // Filter mixitup
+  $(function(){
+    $('.mixitup').mixItUp();
+  });
+
+
   // Custom scroll
 
   (function($){
@@ -83,7 +89,8 @@ $(document).ready(function() {
     controls: false,
     auto: true,
     speed: 1000,
-    pause: 7000
+    pause: 7000,
+    adaptiveHeight: true
   });
   var slider3 = $('.bx-slider-3').bxSlider({
     pager: false,
@@ -94,7 +101,8 @@ $(document).ready(function() {
     minSlides: 2,
     maxSlides: 7,
     slideWidth: 200,
-    slideMargin: 100
+    slideMargin: 100,
+    responsive: true
   });
   var slider4 = $('.bx-slider-4').bxSlider({
     pager: true,
@@ -118,20 +126,20 @@ $(document).ready(function() {
     auto: true,
     speed: 1000,
     pause: 7000,
-    minSlides: 6,
-    maxSlides: 16,
+    minSlides: 3,
+    maxSlides: 18,
     slideWidth: 60,
     slideMargin: 5
   });
 
   $('#next').click(function(){
-    slider1.goToNextSlide();
-    slider2.goToPrevSlide();
+    slider2.goToNextSlide();
+    slider1.goToPrevSlide();
     return false
   });
   $('#prev').click(function(){
-    slider1.goToPrevSlide();
-    slider2.goToNextSlide();
+    slider2.goToPrevSlide();
+    slider1.goToNextSlide();
     return false
   });
 
@@ -187,14 +195,18 @@ $(document).ready(function() {
   
   // Height detect funciton
   function heightDetect(){
-    $('.scroll-wrap').css( 
-      'height', $('.section__sl .slide img').height()
+    $('.scroll-wrap, .filter-wrapper').css( 
+      'height', $('.section__sl .slide img, .filter-content ').height()
     );
   };
 
   heightDetect();
   $(window).resize(function(){
     heightDetect();
+  });
+
+  $(window).load(function() {
+    heightDetect('.filter-content, .filter-wrapper');
   });
 
   // Width detect funciton
@@ -249,12 +261,12 @@ $(document).ready(function() {
   }
   
   $(window).load(function() {
-    equalheight('.section__obj__wrap');
+    equalheight('.section__obj__wrap,  .filter-wrapper, .filter-content');
   });
   
   
   $(window).resize(function(){
-    equalheight('.section__obj__wrap');
+    equalheight('.section__obj__wrap , .file-wrapper');
   });
 
   // CHarts

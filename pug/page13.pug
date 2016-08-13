@@ -1,0 +1,23 @@
+extends layout
+include mixins.pug
+
+block content
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Охрана труда и окружающей среды"
+      ])
+      +heading([
+        'Партнеры компании',
+        'УКСХ – открытая компания, мы всегда готовы ответить на вопросы журналистов, организовать интервью с первыми лицами компании, предоставить информацию о наших проектах.'
+      ])
+      .container
+        .steps-wrapper
+          .step
+            a(href='#')
+              span.str30 Новости компании
+          .step
+            a(href='#')
+              span.str30 Публикации в прессе

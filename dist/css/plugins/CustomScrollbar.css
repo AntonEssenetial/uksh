@@ -360,7 +360,7 @@ yx-axis
 	}
 	.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 	.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-		background-color: #fff; background-color: #D8D20F;
+		background-color: #fff; background-color: #fcc100;
 		filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; 
 	}
 

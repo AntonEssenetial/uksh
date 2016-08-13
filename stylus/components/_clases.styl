@@ -157,6 +157,7 @@
   right 0px 
   width 0px 
   height 0px
+  z-index 9999
 .morphsearch-content
   background: blue
   padding-top 45px
@@ -460,7 +461,8 @@ h4
 .s-text 
   color white
   padding-top 5px
-  
+.nums p 
+  margin 0 !important
 .nums__span 
   font-size 14px 
   medium()
@@ -472,7 +474,316 @@ h4
   width 50px 
   height @width
   text-align: center
-  margin-right 10px
+  margin-right 20px
   static()
 .nums__item
   margin-bottom 40px
+.doc_icon-1
+  color blue
+  +before('')
+    vam(, 0px 15px 0 0)
+    sprite($sprite-doc)
+    static()
+  &:hover 
+    +before()
+      sprite($sprite-doca)
+  static()
+.doc_icon-2
+  color blue
+  +before('')
+    vam(, 0px 15px 0 0)
+    sprite($sprite-pdf)
+    static()
+  &:hover 
+    +before()
+      sprite($sprite-pdfa)
+.dock__download
+  display flex
+  span 
+    padding-top 3px
+  &:hover span 
+    background: #c6cbe6
+    trs()
+p a:hover 
+  background: #c6cbe6
+  trs()
+.history 
+  border-bottom: 1px solid #eaeaea;
+  padding 0 0 50px 0
+  margin 50px 0 0 0
+  &:last-child
+    border none
+  &:first-child
+    margin 20px 0 0 0
+  .col__left 
+    background: yellow 
+    text-align: center
+    padding 20px 15px
+    height 115px
+    static()
+    span 
+      color blue
+      display block
+  .str58
+    bold()
+  .str20
+    medium()
+  .col__right 
+    .str30 
+      bold()
+      margin 0 0 10px 0
+      line-height 33px
+    p 
+      margin 0
+.date-line
+  padding 15px 0 0 0
+  .bx-next 
+    sprite($sprite-bnext)
+    &:hover 
+      sprite($sprite-bnexta)
+  .bx-prev
+    sprite($sprite-bprev)
+    &:hover 
+      sprite($sprite-bpreva)
+  .bx-wrapper     
+    padding 0 50px
+.bx-wrapper .bx-prev
+  left 0px 
+.bx-wrapper .bx-next 
+  right 0px
+.date__link
+  background: #eaeeef
+  font-size 16px 
+  color blue
+  padding 0 5px 
+  height 29px 
+  line-height 31px
+  &:hover 
+    background: blue 
+    color white
+.container_top 
+  padding-top 10px
+  
+.morphsearch-content
+  overflow scroll
+
+.history_reset 
+  .col__left 
+    height auto
+    background: transparent
+    span 
+      color black
+      padding-left 0px
+      padding-right 0px
+  .col__right 
+    .str30 
+      color blue
+  .arcticle__prev
+    height auto 
+    max-width 100% 
+    margin 15px auto 0 auto
+    display block
+.history.history_reset
+  p 
+    margin-bottom 15px
+  .blue
+    margin-bottom 0px
+.partners .col__right
+  .str30 
+    color black
+    
+.menu__item_active
+  border-color blue !important
+  .menu__link 
+    +after()
+      background: blue
+
+.bx-wrapper .bx-pager
+  position relative 
+  z-index 66
+  width 131px 
+  margin 0 auto
+  
+.container-map
+  img
+    display block
+    max-width 100%
+    height auto
+    margin 0 auto
+    
+.country
+  margin 0 auto
+  a
+    font-size 16px 
+    color blue 
+    border-bottom 1px dashed blue
+    margin 0 0 20px 0
+    &:hover 
+      border-color transparent
+  img 
+    vam(, 0px 15px 0 0)
+    
+.col__custom 
+  width 700px
+  
+.customers
+  .docs__link 
+    padding 25px 25px 20px 25px
+    border 1px solid grey2
+    text-align: center
+    font-size 18px 
+    medium()
+    color blue
+    img 
+      width auto 
+      max-width 100%
+      display block
+      margin 0 auto 20px auto
+
+.filter__items 
+  background #eaeeef
+  padding 25px
+  span 
+    bordered(blue2, ,blue)
+    margin-bottom 15px
+    cursor pointer
+    &:hover 
+      color blue2
+  li 
+    &:last-child span
+      margin 0px  
+.mix
+  display: none;
+  position relative
+  overflow hidden
+.mixitup 
+  overflow hidden
+  text-align justify
+  +after('')
+    display: inline-block;
+    width: 100%;
+.gap 
+  width 23%
+  display: inline-block;
+  vertical-align: top
+.mix
+  width 23%
+  margin-bottom 2.5%
+  border 1px solid grey2
+  background: white
+  &:hover 
+    .filter-content
+      opacity 1
+      margin-left 0px 
+      trs()
+.filter.active 
+  color blue2
+  +after()
+    width 100%
+.filter-wrapper
+  .top-img img
+    width 100%
+    height auto 
+    display block
+  .bottom-img 
+    padding 25px 20px
+    img
+      display block
+      margin 0 auto 
+      max-width 100%
+.filter-content-in
+  padding 20px
+.filter-content
+  position: absolute
+  top 0px 
+  left 0px
+  width 100%
+  height auto
+  background: white
+  margin-left -200px
+  trs()
+  opacity 0
+  span 
+    display block
+  ul 
+    margin 10px 0
+  .str18
+    color blue
+  .ot
+    margin-bottom 10px
+    color #414144
+.city 
+  color blue2
+  display inline-block !important
+.place 
+  background: #156eb9
+  padding 15px 20px 16px 20px
+  span 
+    color white
+    bold()
+.dline 
+  margin-top 3px
+p a 
+  color blue
+.cl
+  text-align left
+  color blue
+  padding 4px 3px 3px 3px
+  +before('')
+    width 5px 
+    height @width 
+    background: yellow
+    vam(1px, 0px 10px 0 0 )
+    border-radius(50%)
+    static()  
+.cl_active 
+  background: yellow
+.container_bot 
+  padding-bottom 20px
+.filter__items 
+  ul 
+    padding-right 20px
+.steps 
+  border-left 7px solid blue
+  background: #eaeeef
+  padding 30px 0px 27px 40px
+  .str30 
+    bold()
+    text-transform uppercase
+    color blue
+.step
+  position: relative
+  background: #eaeeef
+  z-index 1
+  display: block
+  height 100px 
+  line-height 106px
+  a 
+    display block
+    padding-left 40px
+    position relative 
+    z-index 2
+  +before('')
+    display block
+    position absolute
+    top 0px 
+    left 0px 
+    width 10px 
+    background: yellow
+    height 100%
+    trs()
+  &:hover 
+    +before()
+      width 100%
+      trs()
+      z-index 0
+  .str30 
+    bold()
+    text-transform: uppercase
+    color blue
+    position relative 
+    z-index 2
+  &:first-child
+    margin-bottom 30px
+.steps-wrapper
+  margin-bottom 200px

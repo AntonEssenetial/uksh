@@ -1,0 +1,25 @@
+extends layout
+include mixins.pug
+
+block content
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Услуги"
+      ])
+      +heading([
+        'Наши Услуги.',
+        'ЗАО «Управляющая компания строительного холдинга» осуществляет полный комплекс инжиниринговых услуг:'
+      ])
+      .container.container_top
+        ul.jsNavgoco.acordion
+          - for (var x = 0 ; x <4 ; x++)
+            li.acordion__item
+              a(href='#').acordion__link Базовый инжиниринг
+              ul.acordion__sub-item.acordion__sub-item_reset
+                li
+                  span.acordion__span Разработка базовой технологии
+                  span.acordion__span Расчет производительности и потребных ресурсов
+                  span.acordion__span Подбор основного технологического оборудования

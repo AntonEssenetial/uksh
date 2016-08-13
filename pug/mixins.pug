@@ -330,6 +330,10 @@ mixin heading(item)
   if item[1]= item[1]
     .section__content-text
       p= item[1]
+      if item[2]= item[2]
+        p= item[2] 
+          if item[3]= item[3]
+            a(href='mailto:')= item[3]
 
 //- text
 mixin text(item)

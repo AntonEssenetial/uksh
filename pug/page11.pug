@@ -1,0 +1,421 @@
+extends layout
+include mixins.pug
+
+block content
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "машиностроение"
+      ])
+      +heading([
+        'машиностроение'
+      ])
+      .container.container_top.container_bot 
+        .row.filter__items.between
+          ul
+            li
+              span.btn.filter(data-filter=".category-1") МАШИНОСТРОЕНИЕ
+            li
+              span.btn.filter(data-filter=".category-2") ГОРНОДОБЫВАЮЩАЯ ПРОМЫШЛЕННОСТЬ
+            li
+              span.btn.filter(data-filter='.category-3') СТРОИТЕЛЬНАЯ ИНДУСТРИЯ    
+            li
+              span.btn.filter(data-filter='.category-4') ПЕРЕДИСЛОКАЦИЯ ОБОРУДОВАНИЯ 
+            li
+              span.btn.filter(data-filter='.category-5') ПРОЕКТИРОВАНИЕ 
+          ul
+            li
+              span.btn.filter(data-filter='.category-6') ЧЕРНАЯ МЕТАЛЛУРГИЯ И ТРУБНАЯ ПРОМЫШЛЕННОСТ 
+            li
+              span.btn.filter(data-filter='.category-7') ХИМИЧЕСКАЯ И НЕФТЕГАЗОВАЯ ПРОМЫШЛЕННОСТЬ
+            li
+              span.btn.filter(data-filter='.category-8') ОЧИСТНЫЕ СООРУЖЕНИЯ И ГАЗООТЧИСТКА
+            li
+              span.btn.filter(data-filter='.category-9') ГОСУДАРСТВЕННЫЕ И МУНИЦИПАЛЬНЫЕ ЗАКАЗЧИКИ
+            li
+              span.btn.filter(data-filter='.category-10') ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ 
+          ul
+            li
+              span.btn.filter(data-filter='.category-11') ЦВЕТНАЯ МЕТАЛЛУРГИЯ
+            li
+              span.btn.filter(data-filter='.category-12') ЭНЕРГЕТИКА
+            li
+              span.btn.filter(data-filter='.category-13') АГРОПРОМЫШЛЕННОСТЬ
+            li
+              span.btn.filter(data-filter='.category-14') ЛОГИСТИЧЕСКИЕ ОБЪЕКТЫ
+            li
+              span.btn.filter(data-filter="all") все
+      .container.container_top
+        .customers.mixitup
+          a(href='').col__23.mix.category-1
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-2
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ 
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-3
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-4
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-5
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-6
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-7
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-8
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-9
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-10
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-11
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-12
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-13
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-14
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-2
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          a(href='').col__23.mix.category-2
+            .filter-wrapper
+              .top-img
+                img(src="images/articles/7.jpg", alt="").docs__img
+              .bottom-img
+                img(src="images/articles/8.jpg", alt="").docs__img
+            .filter-content
+              .filter-content-in
+                span.str18.bold PARK INN СОЧИ
+                span.str12.medium Гостиница 3*
+                span.str12.regular.ot Гостиницы
+                .str12.regular 2014 г. 
+                  span.city Краснодарский край 
+                span.str12.regular.dline Срок строительства : 27 месяцев
+                ul
+                  li.cl.str12.row Проектирование
+                  li.cl.str12.row Функции тех. заказчика
+                  li.cl.str12.row.cl_active Генподряд на строительство
+                  li.cl.str12.row Подготовка к эксплуатации
+                  li.cl.str12.row Гарантийное обслуживание
+                .row.between.place
+                  span.str12 Общая площадь     
+                  span.str12 9 700 кв.м
+          .gap 
+          .gap
