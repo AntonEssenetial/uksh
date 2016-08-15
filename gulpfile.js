@@ -125,8 +125,8 @@ gulp.task('build', function (cb) {
   return runSequence(
     'build-js',
     'pug',
-    'stylus',
     'sprite',
+    'stylus',
     cb
   );
 });

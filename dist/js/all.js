@@ -5,12 +5,14 @@ $(document).ready(function() {
     $('.mixitup').mixItUp();
   });
 
-
+  $('.comment-ans').click(function(){
+    $(this).closest('.comment-result').find('.textarea-wrp').toggleClass('active');
+  });
   // Custom scroll
 
   (function($){
     $(window).load(function(){
-      $(".scroll-wrap").mCustomScrollbar({
+      $(".scroll-wrap, .m-scroll").mCustomScrollbar({
         scrollInertia:100,
         contentTouchScroll: true,
         autoExpandScrollbar: true
@@ -63,13 +65,26 @@ $(document).ready(function() {
   }).eq(0)
 
   // popup
-  var popup = $('.popup-wrapper')
-  $('.js__popup').click(function(event) {
+  var popup = $('.popup')
+  $('.jsCall').click(function(event) {
     popup.addClass('jsVisible');
+    $('.jsPopup-1').addClass('active');
+    return false
   });
-  $('.close').click(function(event) {
-    popup.removeClass('jsVisible');
+  $('.jsCli').click(function(event) {
+    popup.addClass('jsVisible jsWhite');
+    $('.jsPopup-3').addClass('active');
+    return false
+  });
+  $('.jsCountry').click(function(event) {
+    popup.addClass('jsVisible');
+    $('.jsPopup-2').addClass('active');
+    return false
+  });
+  $('.popup__close').click(function(event) {
+    popup.removeClass('jsVisible jsWhite');
     $(this).closest('.jsVisible').removeClass('jsVisible');
+    $('.jsPopup-1, .jsPopup-2, .jsPopup-3').removeClass('active');
   });
 
   // Navgoco acordion
@@ -131,7 +146,27 @@ $(document).ready(function() {
     slideWidth: 60,
     slideMargin: 5
   });
-
+  var slider6 = $('.bx-slider-6').bxSlider({
+    responsive: true,
+    pagerCustom: '.bx-slider-7',
+    controls: false
+  });
+  var slider7 = $('.bx-slider-7').bxSlider({
+    pager: false,
+    controls: true,
+    minSlides: 2,
+    maxSlides: 5,
+    slideWidth: 130,
+    slideMargin: 10,
+    nextSelector: '.s-next-2',
+    prevSelector: '.s-prev-2',
+    nextText: '',
+    prevText: ''
+  });
+  $('.sc').click(function(event) {
+    $('.sc').removeClass('active2')
+    $(this).addClass('active2')
+  });
   $('#next').click(function(){
     slider2.goToNextSlide();
     slider1.goToPrevSlide();
@@ -200,13 +235,16 @@ $(document).ready(function() {
     );
   };
 
+
+
+  heightDetect2();
   heightDetect();
   $(window).resize(function(){
-    heightDetect();
+    heightDetect('.jsPopup-3');
   });
 
   $(window).load(function() {
-    heightDetect('.filter-content, .filter-wrapper');
+    heightDetect('.filter-content, .filter-wrapper, .jsPopup-3 ');
   });
 
   // Width detect funciton

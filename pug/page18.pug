@@ -1,0 +1,72 @@
+extends layout
+include mixins.pug
+
+block content
+  +header()
+  section.section__content.section__page
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        "Клиенты",
+        "Гостиничное исскуство",
+        "park in Сочи"
+      ])
+      +heading([
+        'park inn сочи'
+      ])
+      span.str18.pl Гостиница 3*
+      .page__img 
+        img(src='images/articles/8.jpg')
+    .page-slider
+      .prev-p
+        a(href='#').row
+          span.arrows.prev-a.row
+          img(src='images/articles/11.jpg')
+      .next-p
+        a(href='#').row
+          img(src='images/articles/11.jpg')
+          span.arrows.next-a.row
+      .bx-wrap
+        .bx-slider-6
+          -for(var x = 0; x < 5; x++)
+            .silde
+              img(src='images/slider/2.jpg')
+    .bx-car-wrap
+      .bx-controls-3
+        .s-prev-2
+        .s-next-2
+      .bx-slider-7
+        a(href="" data-slide-index="0").sc
+          img(src='images/slider/2.jpg')
+        a(href="" data-slide-index="1").sc
+          img(src='images/slider/2.jpg')
+        a(href="" data-slide-index="2").sc
+          img(src='images/slider/2.jpg')
+        a(href="" data-slide-index="3").sc
+          img(src='images/slider/2.jpg')
+        a(href="" data-slide-index="4").sc
+          img(src='images/slider/2.jpg')
+    .page-stat
+      .str14 2014 г. 
+        span Краснодарский край
+      span.str14 Срок строительства
+      span.str14 27 месяцев 
+      span.str14 Декабрь 2011 - Февраль 2014
+      ul
+        li
+          a(href='').cl.str12.row Проектирование
+        li
+          a(href='').cl.str12.row Функции тех. заказчика
+        li
+          a(href='').cl.str12.row Генподряд на строительство
+        li
+          a(href='').cl.str12.row Подготовка к эксплуатации
+        li
+          a(href='').cl.str12.row Гарантийное обслуживание
+      span.str18.stru Общая площадь
+      span.str18.bold 9 700 кв.м
+      p Компания завершила строительство отеля "Парк Инн" в олимпийской столице – Сочи.
+      p Гостиница «Парк Инн Сочи» уровня 3* возведена в центре Сочи (улица Горького, 56), рядом с городским железнодорожным вокзалом, являющимся памятником архитектуры и построенным по проекту архитектора А.Н. Душкина. Проект здания гостиницы получил одобрения на градостроительных советах Краснодарского края и города Сочи и гармонично вписывается в существующую застройку, повторяя стиль здания вокзала.
+      p Строительные работы на объекте начались в декабре 2011 года, а уже накануне Олимпиады-2014 состоялось техническое открытие отеля.
+      p Площадь здания гостиницы – 9,7 тыс. кв. м. Она рассчитана на 147 номеров. Управляет объектом международный гостиничный оператор The Rezidor Hotel Group. 
+      a(href="").button.button_blue назад к списку

@@ -1,3 +1,10 @@
+// Stylus mixins
+@import 'components/_mixins-stylus'
+// Sprite mixins 
+@import 'components/_mixins'
+// Sprite generator
+@import 'components/_sprite'
+
 $IMG-PATH = '../images/backgrounds/'
 // Now you can use the function image-url
 // .element
@@ -39,7 +46,7 @@ $placeholderFont = roboto
 dark          =  #3c3c3c
 yellow        =  #fcc100
 yellow2       =  #fa9600
-blue          =  #273480
+blue          =  #344591
 blue2         =  #156eba
 blue3         =  #101951
 blue4         =  #b1d7f3
@@ -192,8 +199,6 @@ select
   font-family ptsans
   color blcak2
   border 1px solid transparent
-  &:focus 
-    border 1px solid orange
     
 // Label checkbox
 input[type="checkbox"]
@@ -241,9 +246,19 @@ button
     color blue
     trs()
 .button_big
-  width 178px
+  height 70px 
+  line-height 73px
 .button_blue
   background: blue
+.button_white 
+  background: white 
+  color blue 
+  font-size 24px 
+  bold()
+  text-transform: uppercase
+  &:hover 
+    background: blue 
+    color white
 
 // col 
 for i in (1..100)
@@ -329,6 +344,7 @@ bordered( $color = yellow, $size = 14px, $color2 = white)
     trs()
   &:hover 
     color yellow
+    trs()
     &:after 
       width 100% 
       trs()
@@ -351,89 +367,129 @@ th
   font-weight normal
   
 // Popup 
+
+.popup.jsVisible 
+  display flex
 .popup
+  position fixed 
+  background: rgba(24, 38, 121, 0.74);
+  overflow-y scroll
+  top 0px
+  left 0px 
+  width 100% 
+  margin auto auto
+  height @width
+  flex-direction column
+  flex-wrap wrap
+  z-index 1000
   display none
-// .popup.jsVisible 
-//   display flex
-// .popup
-//   display none
-//   position fixed 
-//   background: rgba(0,0,0, 0.4)
-//   overflow-y scroll
-//   top 0px
-//   left 0px 
-//   width 100% 
-//   height @width
-//   flex-direction column
-//   flex-wrap wrap
-//   z-index 3
-//   .container-wrapper
-//     margin auto auto
-//   &__container
-//     width 615px 
-//     background: brown4
-//     margin 0 auto 30px auto
-//     padding 40px
-//     position relative
-//   &__close 
-//     sprite($sprite-close)
-//     right -40px 
-//     top 0px
-//     position absolute
-//     cursor pointer
-//     &:hover 
-//       sprite($sprite-close-hover)
-//   &__title 
-//     font-size 24px 
-//     color milk
-//     bordered()
-//     &:after 
-//       margin 30px 0 0 0
-//   &__link 
-//     color orange
-//     font-size 15px
-//     &_sm 
-//       font-size 14px
-//       color @color
-//       display block
-//   &__links
-//     margin 8px 0 0 0
-//   &__separator
-//     color milk
-//     margin 0 7px
-//     position relative 
-//     top -1px
-//   &__form 
-//     margin 25px 0 0 0
-//   &__captcha 
-//     margin 0 0 25px 0
-//   &__tooltip 
-//     color brown6
-//     font-size 14px
-//     line-height 23px
-//     margin 6px 0 0 0
-//   &__generate
-//     margin 28px 0 20px 0
-//   &__reset-button
-//     background: BGdisabled
-//     padding 11px 11px 12px 11px
-//     display inline-block
-//     border none
-//     position absolute
-//     top 29px 
-//     right 0px
-//     border-left 2px solid brown4
-//   &__area 
-//     height 120px !important
-//   &__text 
-//     color white
-//     font-size 14px 
-//     margin 25px 0 0 0
-//     bordered()
-//     &:after 
-//       margin 30px 0 0 0
-//   &__number
-//     color orange
+  .container-wrapper
+    margin auto auto
+  &__container
+    width 744px 
+    background: white
+    margin 0 auto 30px auto
+    padding 40px
+    position relative
+  &__close 
+    sprite($sprite-close)
+    right 20px 
+    top 20px
+    position absolute
+    cursor pointer
+    &:hover 
+      sprite($sprite-close-hover)
+  &__span
+    font-size 18px 
+    color #2d2e2f
+  &__free 
+    font-size 14px
+    color #848484
+    text-align: center
+    margin-top 40px
+  &__title 
+    font-size 36px
+    text-align: center
+    margin 20px 0
+    bold() 
+    color blue
+    text-transform: uppercase
+  &__span 
+    text-align: center
+  &__link 
+    color orange
+    font-size 15px
+    &_sm 
+      font-size 14px
+      color @color
+      display block
+  &__links
+    margin 8px 0 0 0
+  &__separator
+    color milk
+    margin 0 7px
+    position relative 
+    top -1px
+  &__form 
+    margin 25px 0 0 0
+  &__captcha 
+    margin 0 0 25px 0
+  &__tooltip 
+    color brown6
+    font-size 14px
+    line-height 23px
+    margin 6px 0 0 0
+  &__generate
+    margin 28px 0 20px 0
+  &__reset-button
+    background: BGdisabled
+    padding 11px 11px 12px 11px
+    display inline-block
+    border none
+    position absolute
+    top 29px 
+    right 0px
+    border-left 2px solid brown4
+  &__area 
+    height 120px !important
+  &__text 
+    color white
+    font-size 14px 
+    margin 25px 0 0 0
+    &:after 
+      margin 30px 0 0 0
+  &__number
+    color orange
+  .form__input 
+    background: white 
+    border 1px solid grey2
+    color #a0a0a0
+    font-size 18px 
+    bold()
+    margin-bottom 0px
+    padding 0 20px
+    height 55px 
+    line-height 58px
+  .button 
+    height 55px 
+    line-height 58px
+    font-size 18px
+  .form__select 
+    border 1px solid grey2
+    border-left 0px
+    padding 0 25px 0 10px
+    height 55px 
+    line-height 58px
+    position relative
+    select
+      bold()
+      font-size 18px
+      color #a0a0a0
+    +after('')
+      triangle(8px, 6px, bottom, black)
+      position absolute
+      right 10px 
+      top 48%
 
 // Notifications 
 // .notification

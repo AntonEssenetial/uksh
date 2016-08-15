@@ -1,0 +1,38 @@
+extends layout
+include mixins.pug
+
+block content
+  +header()
+  section.section__content
+    .container-wrapper
+      +bread-crumbs([
+        "Главная", 
+        'Пресс-центр',
+        "Новости компании"
+      ])
+      +heading([
+        'Новости компании'
+      ])
+      .container
+        .news-wrapper
+          - for (var x = 0; x < 10; x++)
+            .row
+              .col__50.col_margin.row
+                .static.col_margin
+                  span.str36 20 
+                  span.str20 Дек
+                .auto__width
+                  a(href='')
+                    img(src='images/articles/4.jpg')
+              .col__50
+                a(href='').str30 Строительство объектов Wurth и Scania
+                p Санкт-Петербургский филиал Россельхозбанка обеспечил УКСХ банковскими гарантиями под строительство объектов Wurth и Scania. Банковские гарантии на сумму 131,7 млн рублей позволят компании получить авансирование и своевременно исполнить обязательства в рамках контрактов с ЗАО «Вюрт Северо-Запад» и ООО «Скания-Сервис». 
+                a(href='#').more ПОДРОБНЕЕ
+        .pagination.pagination-wrapper.pagination-wrapper_reset
+          <ul class="row full__pagination">
+            <li class="pagination__item"> <a href="" class="pagination__link">предидущая</a></li>
+            <li class="pagination__item pagination__item_active"><a href="" class="pagination__link">1</a></li>
+            <li class="pagination__item"> <a href="" class="pagination__link">2</a></li>
+            <li class="pagination__item"> <a href="" class="pagination__link">3</a></li>
+            <li class="pagination__item"> <a href="" class="pagination__link">следующая</a></li>
+          </ul>

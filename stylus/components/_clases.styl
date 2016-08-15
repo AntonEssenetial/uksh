@@ -152,6 +152,8 @@
 // BG 
 .col__50_bg 
   background: image-url('bg7.png') left top no-repeat
+.m-scroll 
+  height 80%
 .morphsearch
   top 0px 
   right 0px 
@@ -162,6 +164,9 @@
   background: blue
   padding-top 45px
   height 100%
+  padding-bottom 100px
+  .mCSB_container 
+    padding-right 20px
 .morphsearch.open .morphsearch-content
   height 100%
 .morphsearch
@@ -193,8 +198,10 @@
     sprite($sprite-search-a)
 .search__icon 
   sprite($sprite-search)
+  static()
   margin auto 20px
-  
+label:hover span 
+  trs()
 .all 
   text-transform: uppercase 
   bold()
@@ -473,6 +480,8 @@ h4
   font-size 60px
   width 50px 
   height @width
+  line-height @height
+  padding-top 4px
   text-align: center
   margin-right 20px
   static()
@@ -622,11 +631,30 @@ p a:hover
       border-color transparent
   img 
     vam(, 0px 15px 0 0)
-    
+
+.cli-wrap 
+  margin 60px 0 100px 0
+  img 
+    max-width 100% 
+    height auto
+    display block
+    margin 0 auto
 .col__custom 
   width 700px
-  
+.jsWhite 
+  background: white
+.jsPopup-3 
+  width 100%
+  margin 0 
+  top 0px 
+  left 0px 
+  position absolute
+  height 100%
+  p 
+    margin 0 0 30px 0
+  padding-bottom 50px
 .customers
+  flex-wrap wrap
   .docs__link 
     padding 25px 25px 20px 25px
     border 1px solid grey2
@@ -693,6 +721,8 @@ p a:hover
       max-width 100%
 .filter-content-in
   padding 20px
+  .str18.bold:hover 
+    color blue2
 .filter-content
   position: absolute
   top 0px 
@@ -725,10 +755,72 @@ p a:hover
   margin-top 3px
 p a 
   color blue
+.prev-a 
+  +after('')
+    sprite($sprite-bx-prev)
+    vam(, auto auto)
+.next-a
+  +after('')
+    sprite($sprite-bx-next) 
+    vam(, auto auto)
+.prev-p 
+  position absolute
+  left 0px
+  top 40%
+  img 
+    display block
+    transform: rotateY(90deg);
+    transform-origin left
+    trs()
+    opacity 0 
+    visibility hidden
+  a 
+    perspective: 300px;
+  &:hover 
+    img 
+      transform rotateY(0deg)
+      opacity 1 
+      visibility visible
+      trs()
+.arrows
+  width 100px 
+  height @width
+  background: #eaeeef
+  &:hover 
+    background: yellow
+.next-p 
+  position absolute
+  right 0px
+  top 40%
+  img 
+    display block
+    transform: rotateY(-90deg);
+    transform-origin right
+    trs()
+    opacity 0 
+    visibility hidden
+  a 
+    perspective: 300px;
+  &:hover 
+    img 
+      transform rotateY(0deg)
+      opacity 1 
+      visibility visible
+      trs()
+.arrows
+  width 100px 
+  height @width
+  background: #eaeeef
+.page-stat 
+  .cl
+    font-size 14px
+    +before()
+      display none
 .cl
   text-align left
   color blue
   padding 4px 3px 3px 3px
+  display: inline-block
   +before('')
     width 5px 
     height @width 
@@ -736,6 +828,8 @@ p a
     vam(1px, 0px 10px 0 0 )
     border-radius(50%)
     static()  
+  &:hover 
+    background: yellow
 .cl_active 
   background: yellow
 .container_bot 
@@ -787,3 +881,560 @@ p a
     margin-bottom 30px
 .steps-wrapper
   margin-bottom 200px
+.section__not-found 
+  padding 200px 0
+  background: #fdd500
+.not-found 
+  text-align: center
+  margin auto auto
+  position relative
+  img 
+    display block
+    margin auto auto
+    max-width 100%
+    height auto
+.not-str
+  absolute-center(700px,150px)
+  padding-top 50px
+  .str30 
+    bold()
+    text-transform: uppercase
+    display: block
+    margin 0 0 30px 0
+    
+.map 
+  iframe
+    height 310px
+    width 100%
+    display block
+.col_bg 
+  background url(../images/backgrounds/bg12.jpg) no-repeat
+  padding 30px 25px
+  padding-bottom 0px
+  background-size cover
+  width 370px
+.section__content-contacts
+  .str20 
+    font-size 13px 
+    color white
+    margin-bottom 15px
+    line-height 17px
+    regular()
+    span 
+      bold()
+      font-size 14px
+    &_m 
+      margin-bottom 0px
+  .c-icon-3 span 
+    color yellow
+    regular()
+.cont-s a
+  margin-right 5px
+.c-icon-1
+  &:before
+    content ''
+    sprite($sprite-c-icon-1)
+    display block
+    margin-right 10px
+    position relative
+    top -1
+    static()
+.c-icon-2
+  &:before
+    content ''
+    sprite($sprite-c-icon-2)
+    display block
+    margin-right 10px
+    position relative
+    top -1px 
+    left 2px
+    static()
+.c-icon-3
+  &:before
+    content ''
+    sprite($sprite-c-icon-3)
+    display block
+    margin-right 10px
+    position relative
+    top -1
+    static()
+.c-icon-4
+  &:before
+    content ''
+    sprite($sprite-c-icon-4)
+    display block
+    margin-right 10px
+    position relative
+    top -1
+    static()
+.cont__soc-link
+  &:first-child 
+    sprite($sprite-cont1)
+    display: block
+    &:hover 
+      sprite($sprite-soc1a)
+  &:nth-child(2)
+    sprite($sprite-cont2)
+    display: block
+    &:hover 
+      sprite($sprite-soc2a)
+  &:nth-child(3)
+    sprite($sprite-cont3)
+    display: block
+    &:hover 
+      sprite($sprite-soc3a)
+  &:nth-child(4)
+    sprite($sprite-cont4)
+    display: block
+    &:hover 
+      sprite($sprite-soc4a)
+  &:nth-child(5)
+    sprite($sprite-cont5)
+    display: block
+    &:hover 
+      sprite($sprite-soc5a)
+  &:nth-child(6)
+    sprite($sprite-cont6)
+    display: block
+    &:hover 
+      sprite($sprite-soc6a)
+.tab-c.active 
+  background: blue2
+  color white
+.tab-c 
+  font-size 14px 
+  bold()
+  text-transform: uppercase
+  color blue
+  padding 25px 40px 23px 40px
+.section__tab 
+  background: #eaeeef
+  margin-bottom 30px
+.section__content-contact-form
+  margin 60px 0 50px 0
+  .str30 
+    margin 0 0 30px 0
+    text-transform: uppercase
+  .form__area
+    height 150px
+  .form__input 
+    height 60px
+  .button 
+    height 60px
+    line-height 65px
+.form__input 
+.form__area
+  background: #eaeeef
+  color blue 
+  font-size 14px 
+  padding 20px
+  margin 0 0 30px 0
+  medium()
+  +placeholder()
+    color blue 
+.news-wrapper 
+  .str36 
+    bold()
+    color white
+    display: block
+    background: blue
+    height 60px 
+    width @height
+    line-height 60px
+    text-align: center
+  .str20
+    text-transform: uppercase
+    display: block
+    background: yellow
+    height 40px 
+    width 60px
+    line-height 40px
+    text-align: center
+  .auto__width 
+    img 
+      max-width 100%
+      display block 
+      height auto
+  > .row 
+    border-bottom 1px solid rgba(200, 207, 209, 0.55);
+    padding 0 0 50px 0
+    margin 50px 0 0 0
+    &:first-child
+      margin 0px
+  .str30 
+    bold()
+    color black
+    line-height 35px
+    margin 0 0 20px 0
+    &:hover
+      color blue 
+      trs()
+  .more 
+    bordered(yellow, 18px,blue)
+    
+.pagination__item_active a 
+  background: yellow
+.pagination 
+  margin 40px 0 0 0
+.full__pagination
+  a 
+    color blue 
+    font-size 36px 
+    bold() 
+    width 50px 
+    height @width
+    line-height 54px 
+    text-align: center
+    margin 3px
+    &:hover 
+      color blue2
+  li 
+    &:nth-child(2)
+      margin-left auto
+    &:first-child
+      &:hover
+        a 
+          color blue2 
+          +before()
+            sprite($sprite-bx-prev-a)
+      a 
+        width auto
+        margin-right auto
+        font-size 18px
+        text-transform: uppercase
+        medium()
+        color blue
+        &:before 
+          content ''
+          sprite($sprite-bx-prev)
+          display inline-block 
+          vertical-align: middle
+          margin-right 10px
+          position relative 
+          top -2px
+.pagination__item:last-child
+  margin-left: auto;
+  margin-right: 0;
+  a 
+    width auto
+    margin-right auto
+    font-size 18px
+    text-transform: uppercase
+    medium()
+    color blue
+    &:after 
+      content ''
+      sprite($sprite-bx-next)
+      display inline-block 
+      vertical-align: middle
+      margin-left 10px
+      position relative 
+      top -2px
+  &:hover 
+    a 
+      color blue2 
+      +after()
+        sprite($sprite-bx-next-a)
+.single-page
+  img 
+    max-width 100%
+    height auto 
+    display block 
+  &-img
+    margin 0 0 30px 0
+    img
+      max-width 100%
+      height auto 
+      display block
+.cit 
+  border-left 2px solid yellow
+  padding 20px 0 20px 20px
+  margin-left 60px !important
+  display block 
+.section__content_news 
+  h2 
+    color black
+.tags 
+  font-size 14px 
+  text-transform: uppercase
+  padding 10px 0 20px 0
+  li
+    display inline-block
+    color blue
+    +after('')
+      width 6px 
+      height @width 
+      border-radius(50%)
+      vam(-2px, 0px 10px)
+      background: yellow
+    &:first-child
+    &:last-child
+      color #7d7d7d
+    &:last-child 
+      +after('')
+        display none
+
+.share
+  a
+    margin 0 2px
+    &:first-child
+      sprite($sprite-soc1)
+      &:hover 
+        sprite($sprite-soc1a)
+    &:nth-child(2)
+      sprite($sprite-soc2)
+      &:hover 
+        sprite($sprite-soc2a)
+    &:nth-child(3)
+      sprite($sprite-soc3)
+      &:hover 
+        sprite($sprite-soc3a)
+    &:nth-child(4)
+      sprite($sprite-soc4)
+      &:hover 
+        sprite($sprite-soc4a)
+    &:nth-child(5)
+      sprite($sprite-soc5)
+      &:hover 
+        sprite($sprite-soc5a)
+    &:nth-child(6)
+      sprite($sprite-soc6)
+      &:hover 
+        sprite($sprite-soc6a)
+      
+.share-row 
+  padding 40px 0
+  border-bottom 1px solid #dddddd
+  .tt 
+    bold()
+    color black 
+    font-size 14px 
+    text-transform: uppercase
+    margin-right 5px
+  .new-tags 
+    a 
+      font-size 14px
+      color blue
+      text-transform uppercase
+      &:hover 
+        color blue2
+
+.comment-c
+   .str30 
+     text-transform: uppercase
+.comment-c2
+  color yellow
+  padding-bottom 30px
+.comment-c1
+  padding-bottom 30px
+.comment-c3
+  padding-bottom 20px
+  padding-top 10px
+  
+.comment-form
+  .form 
+    padding 0 0 30px 0
+  .form__area 
+    height 240px
+  .button 
+    padding: 0 20px;
+    line-height 65px
+  input
+    padding 0 20px 
+    height: 60px;
+    
+.comment-area 
+  padding-bottom 100px
+  p 
+    margin 0 0 20px 0 !important
+  .comment-textarea
+    background: #eaeeef
+    padding 20px 
+    color blue 
+    font-size 14px
+    margin 0px 0 25px 0
+    width 100%
+    height 150px
+    medium()
+    +placeholder()
+      color blue 
+      medium()
+.comment-name 
+  medium()
+  font-size 14px
+  padding 0 0 20px 0
+  +before('')
+    width 6px 
+    height @width 
+    background: blue 
+    border-radius (50%)
+    vam(, 0px 10px 0 0)  
+.textarea-wrp.active 
+  display block
+.textarea-wrp
+  display none
+  position relative
+  input 
+    position absolute
+    right 0px 
+    bottom 29px
+.comment-ans 
+  cursor pointer
+  bold()
+  margin 0 0 20px 0
+  text-transform: uppercase
+  color blue
+  +before('')
+    sprite($sprite-comment)
+    vam(, 0px 10px 0 0)
+  &:hover 
+    +before()
+      sprite($sprite-commenta)
+    color yellow
+.comment-area-wrapper 
+  .comment-area-wrapper
+    padding-left 80px
+.bx-wrapper .bx-controls-direction a
+  z-index 100
+.section__page 
+  h2 
+    text-align: center
+    margin-bottom 0px
+.pl 
+  text-align: center
+  width 100%
+.page__img img
+  max-width 100% 
+  display block
+  margin 30px auto 
+.bx-wrap
+  width 900px 
+  margin 0 auto
+.page-slider 
+  position relative
+  width 100%
+.bx-controls-2 
+  position absolute
+  width 100%
+  left 0px
+  top 50%
+  .s-prev 
+    left 0px
+    position absolute
+  .s-next 
+    right 0px
+    position absolute
+.bx-car-wrap
+  width 800px 
+  margin 50px auto 
+  padding 0 40px
+.bx-controls-3
+  margin 0 -40px 
+  position: relative
+  top 25px
+  .s-prev-2
+    top 50%
+    position absolute
+    left 0px 
+  .s-next-2
+    top 50%
+    position absolute
+    right 0px
+.sc 
+  z-index 1000
+.bx-car-wrap
+  .active2
+  .active
+    +after('')
+      width 100%
+      height 100% 
+      display: block
+      position: absolute
+      left 0px 
+      top 0px 
+      background: rgba(39, 52, 128, 0.72);
+.page-stat 
+  .str14 
+    medium()
+    margin 0 0 2px 0
+    span 
+      color blue2
+      margin-bottom 10px
+  .stru 
+    color #414144
+  .str18 
+    margin 0 0 10px 0
+  .str18.bold
+    margin-bottom 40px
+  margin-bottom 40px
+  .button 
+    line-height 43px
+    margin 10px 0 0 0
+  ul 
+    margin 15px 0
+    span 
+      padding 4px 20px
+    .active span 
+      background: yellow
+  li 
+    padding 2px
+    display: block
+    text-align: center
+    medium()
+    font-size 14px
+    +before()
+      display none
+  width 800px 
+  margin 0 auto
+  text-align: center
+  .str14 
+    display: block
+  .str18
+    display: block
+.section__page
+  
+
+  .bx-prev
+    sprite($sprite-bx-prev)
+    &:hover
+      sprite($sprite-bx-prev-a)
+  .bx-next
+    sprite($sprite-bx-next)
+    &:hover
+      sprite($sprite-bx-next-a)
+.jsPopup-1
+.jsPopup-2
+.jsPopup-3
+  display none
+.jsPopup-1.active 
+  display block
+.jsPopup-2.active 
+  display block
+.jsPopup-3.active 
+  display block
+.jsPopup-2 
+  padding-top 60px    
+  padding-bottom 60px    
+.c-link 
+  font-size 16px
+  bordered(blue, blue)
+  color blue
+  text-transform: none
+  margin 0 0 10px 0
+  &:hover 
+    color blue
+.c-ul li
+  display flex
+  +before('')
+    width 6px 
+    height @width 
+    border-radius (50%)
+    background: yellow
+    vam(4px, 0px 10px 0 0 )
+    static()
+  &:last-child a 
+    margin 0px
+.cli-p
+  width 860px
+  margin 0 auto
+  

@@ -1,0 +1,12 @@
+extends layout
+include mixins.pug
+
+block content
+  +header()
+  section.section__not-found 
+    .container-wrapper.row
+      .not-found
+        img(src='images/backgrounds/bg11.png')
+        .not-str
+          span.str30 ПРостите, эта страница не найдена
+          a(href='').button.button_white.button_big Вернуться на главную
